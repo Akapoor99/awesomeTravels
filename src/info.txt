@@ -1,0 +1,1 @@
+This is where files like jpeg, png or any other files which are linked with index.html goes !
