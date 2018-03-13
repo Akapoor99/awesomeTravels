@@ -20,6 +20,10 @@ class MemberRegistry
     function addMember($newMember){
       $membersList[] = $newMember;
     }
+
+    function searchMembers($target){
+      
+    }
 }
 
 ?>
