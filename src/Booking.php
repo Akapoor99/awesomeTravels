@@ -34,7 +34,7 @@ class Booking
 		$this->taxiHires[] = $newTaxiService;
 	}
 
-	function getTaxiService($index){
+	function getTaxiServiceInfo($index){
 		return $this->taxiHires[$index]->getTaxiInfo();
 	}
 }
