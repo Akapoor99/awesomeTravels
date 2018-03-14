@@ -32,41 +32,7 @@ header{
   background-size: cover;
 
 }
-<<<<<<< HEAD
 
-=======
-.masthead{
-  height: 100%;
-  align-content: center;
-}
-.heading{
-  font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  font-size: 50px;
-  margin: 50px 0 0;
-  text-transform: uppercase;
-}
-.btn-circle {
-  font-size: 26px;
-  width: 55px;
-  height: 55px;
-  margin-top: 300px;
-  line-height: 38px;
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  color: white;
-  border: 2px solid white;
-  border-radius: 100% !important;
-  background: rgba(255,255,255,0.25);
-}
-  .btn-circle:focus, .btn-circle:hover {
-    color: white;
-    outline: none;
-    background: rgba(255, 255, 255, 0.15);
-    transform: scale(1.02);
-  }
->>>>>>> 1a877828f14ea51627348bfbedde68c920be5026
 
   #booking{
     width:100%;
