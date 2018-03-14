@@ -1,0 +1,56 @@
+#mainNav {
+  font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: black;
+}
+  #mainNav .navbar-brand {
+    font-weight: 700; }
+  #mainNav a {
+    color: white;
+  }
+  #mainNav .nav-body{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+  }
+  #mainNav .nav-container{
+    font-weight: bold;
+    align-items: center;
+    align-content: center;
+  }
+  #mainNav .nav-item{
+    color: rgba(255,255,255,1);
+    outline: none;
+  }
+  #mainNav .nav-item:hover {
+    color: rgba(210,210,210,1);
+    text-decoration: none;
+    }
+  @media (min-width: 992px) {
+    #mainNav {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      -webkit-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+      -moz-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+      transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+      letter-spacing: 1px;
+      border-bottom: none;
+      background: transparent;}
+    }
+
+#mainNav .btn-login{
+  margin-left: 20px;
+  background-color: rgba(255, 0, 0, 0.5);
+  border-radius: 10px 10px 10px 10px;
+  font-weight: bold;
+  color: white;
+  border: 0px;
+  padding: 2px 15px 4px 15px;
+}
+#mainNav .btn-login:hover{
+  background-color: rgba(255, 0, 0, 0.73);
+  transform: scale(1.03);
+}
