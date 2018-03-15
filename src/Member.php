@@ -30,6 +30,10 @@ class Member extends Customer
 		}
 	}
 
+	function getUsername(){
+		return $this->userName;
+	}
+
 	function changePassword($newPassword){
 		$this->password = $newPassword;
 	}
