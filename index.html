@@ -74,15 +74,55 @@
                   <span id="airportcode">LAX</span><span id="timestyle">20:00</span>
                 </div>
               </div>
-              <button type="button" class="btn btn-info col-2" data-toggle="collapse" data-target="#minfo1">
+              <button class = "col-2"  onclick="toggleinfo('minfo1', 'fsimple1','fcont1','rotatearr1')">
                 <img src="icons/down-arrow.png" alt="down icn" id="rotatearr1"/>
               </button>
             </div>
-            <div class = "moreinfotest collapse" id="minfo1">
-              just testing shit out
+            <div class = "moreinfo col" id="minfo1" style = "visibility: collapse;">
+              <div class = "row minforow">
+                <div class ="col-3">
+                  <span id="airportcode">Tue 13 Mar</span>
+                </div>
+                <div class ="col-6">
+                  <div class = "row">
+                    <div class = "col-5">
+                      <span id="airportcode">LHR</span></br>
+                      <span id="timestyle">16:00</span>
+                    </div>
+                    <div class = "col-2" style="padding-left:0; padding-right:0; padding-top: 22px;">
+                      <div class = "dividerline" id="divlinminfo"></div>
+                    </div>
+                    <div class = "col-5">
+                      <span id="airportcode">LAX</span></br>
+                      <span id="timestyle">20:00</span>
+                    </div>
+                  </div>
+                </div>
+                <div class ="col-3">
+                  <span id="airportcode">Economy</span></br>
+                  <span id="timestyle">5hrs 00mins</span>
+                </div>
+              </div>
+              <div class = "row minforow">
+                <div class ="col-3">
+                  <img src = "icons/BAlogo.png" />
+                </div>
+                <div class ="col-6">
+                  <span id="timestyle">British Airways 824</span> </br>
+                  <span id="timestyle">Narrow-body jet Airbus A320-100/200</span> </br>
+                  <span id="timestyle">Operated by Aer Lingus</span>
+                </div>
+              </div>
+              <div class = "row minforow">
+                <div class ="col text-center" style="margin-bottom: 20px">
+                  <button type="button" class="btn btn-danger">Add To Plan</button>
+                </div>
+
+              </div>
             </div>
+
           </div>
-          <div class = "col-md-8 flightcontainer" onMouseOver="showInfo('minfo2', 'fsimple2','fcont2','rotatearr2')" onMouseOut="hideInfo('minfo2', 'fsimple2','fcont2','rotatearr2')" id ="fcont2">
+          <div class = "col-md-8 flightcontainer" id ="fcont2">
             <div class = "flight row"  id ="fsimple2">
               <div class = "simpinfo col-10">
                 <img src="icons/plane.png" alt="plane icn"/>
@@ -93,15 +133,55 @@
                   <span id="airportcode">LAX</span><span id="timestyle">20:00</span>
                 </div>
               </div>
-              <button class = "col-2">
+              <button class = "col-2"  onclick="toggleinfo('minfo2', 'fsimple2','fcont2','rotatearr2')">
                 <img src="icons/down-arrow.png" alt="down icn" id="rotatearr2"/>
               </button>
             </div>
-            <div class = "moreinfo" id="minfo2">
-              just testing shit out
+            <div class = "moreinfo col" id="minfo2" style = "visibility: collapse;">
+              <div class = "row minforow">
+                <div class ="col-3">
+                  <span id="airportcode">Tue 13 Mar</span>
+                </div>
+                <div class ="col-6">
+                  <div class = "row">
+                    <div class = "col-5">
+                      <span id="airportcode">LHR</span></br>
+                      <span id="timestyle">16:00</span>
+                    </div>
+                    <div class = "col-2" style="padding-left:0; padding-right:0; padding-top: 22px;">
+                      <div class = "dividerline" id="divlinminfo"></div>
+                    </div>
+                    <div class = "col-5">
+                      <span id="airportcode">LAX</span></br>
+                      <span id="timestyle">20:00</span>
+                    </div>
+                  </div>
+                </div>
+                <div class ="col-3">
+                  <span id="airportcode">Economy</span></br>
+                  <span id="timestyle">5hrs 00mins</span>
+                </div>
+              </div>
+              <div class = "row minforow">
+                <div class ="col-3">
+                  <img src = "icons/BAlogo.png" />
+                </div>
+                <div class ="col-6">
+                  <span id="timestyle">British Airways 824</span> </br>
+                  <span id="timestyle">Narrow-body jet Airbus A320-100/200</span> </br>
+                  <span id="timestyle">Operated by Aer Lingus</span>
+                </div>
+              </div>
+              <div class = "row minforow">
+                <div class ="col text-center" style="margin-bottom: 20px">
+                  <button type="button" class="btn btn-danger">Add To Plan</button>
+                </div>
+
+              </div>
             </div>
+
           </div>
-        <div class = "col-md-8 flightcontainer" onMouseOver="showInfo('minfo3', 'fsimple3','fcont3','rotatearr3')" onMouseOut="hideInfo('minfo3', 'fsimple3','fcont3','rotatearr3')" id ="fcont3">
+          <div class = "col-md-8 flightcontainer" id ="fcont3">
           <div class = "flight row"  id ="fsimple3">
             <div class = "simpinfo col-10">
               <img src="icons/plane.png" alt="plane icn"/>
@@ -112,24 +192,50 @@
                 <span id="airportcode">LAX</span><span id="timestyle">20:00</span>
               </div>
             </div>
-            <button class = "col-2">
+            <button class = "col-2" onclick="toggleinfo('minfo3', 'fsimple3','fcont3','rotatearr3')">
               <img src="icons/down-arrow.png" alt="down icn" id="rotatearr3"/>
             </button>
           </div>
-          <div class = "moreinfo" id="minfo3">
-            <div class = "row minfofirstrow">
+          <div class = "moreinfo col" id="minfo3" style = "visibility: collapse;">
+            <div class = "row minforow">
               <div class ="col-3">
                 <span id="airportcode">Tue 13 Mar</span>
               </div>
               <div class ="col-6">
-                <span id="airportcode">LHR</span><span id="timestyle">16:00</span>
-                ->
-                <span id="airportcode">LAX</span><span id="timestyle">20:00</span>
+                <div class = "row">
+                  <div class = "col-5">
+                    <span id="airportcode">LHR</span></br>
+                    <span id="timestyle">16:00</span>
+                  </div>
+                  <div class = "col-2" style="padding-left:0; padding-right:0; padding-top: 22px;">
+                    <div class = "dividerline" id="divlinminfo"></div>
+                  </div>
+                  <div class = "col-5">
+                    <span id="airportcode">LAX</span></br>
+                    <span id="timestyle">20:00</span>
+                  </div>
+                </div>
               </div>
               <div class ="col-3">
                 <span id="airportcode">Economy</span></br>
                 <span id="timestyle">5hrs 00mins</span>
               </div>
+            </div>
+            <div class = "row minforow">
+              <div class ="col-3">
+                <img src = "icons/BAlogo.png" />
+              </div>
+              <div class ="col-6">
+                <span id="timestyle">British Airways 824</span> </br>
+                <span id="timestyle">Narrow-body jet Airbus A320-100/200</span> </br>
+                <span id="timestyle">Operated by Aer Lingus</span>
+              </div>
+            </div>
+            <div class = "row minforow">
+              <div class ="col text-center" style="margin-bottom: 20px">
+                <button type="button" class="btn btn-danger">Add To Plan</button>
+              </div>
+
             </div>
           </div>
         </div>
@@ -138,18 +244,22 @@
       </div>
     </section>
     <script>
-      var rotate = document.getElementById('rotateonhover');
-      function showInfo(minfo, fsimple, fcont, rotate){
-        document.getElementById(fcont).style.height = "auto";
-        document.getElementById(minfo).style.visibility = "visible";
-        document.getElementById(fsimple).style.borderRadius = "25px 25px 0 0";
-        document.getElementById(rotate).className='over';
-      }
-      function hideInfo(minfo, fsimple, fcont, rotate){
-        document.getElementById(fcont).style.height = "60px";
-        document.getElementById(minfo).style.visibility = "collapse";
-        document.getElementById(fsimple).style.borderRadius = "25px";
-        document.getElementById(rotate).className='out';
+      rotate = document.getElementById('rotateonhover');
+      function toggleinfo(minfo, fsimple, fcont, rotate){
+        var toggled = document.getElementById(minfo);
+        console.log(toggled.style.visibility);
+        if(toggled.style.visibility === "collapse"){
+          document.getElementById(fcont).style.height = "auto";
+          document.getElementById(minfo).style.visibility = "visible";
+          document.getElementById(fsimple).style.borderRadius = "25px 25px 0 0";
+          document.getElementById(rotate).className='pointdown';
+        }
+        else{
+          document.getElementById(fcont).style.height = "60px";
+          document.getElementById(minfo).style.visibility = "collapse";
+          document.getElementById(fsimple).style.borderRadius = "25px";
+          document.getElementById(rotate).className='pointup';
+        }
       }
     </script>
 
