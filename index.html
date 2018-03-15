@@ -15,6 +15,9 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/homepage/navbar.css" rel="stylesheet">
     <link href="css/homepage/header.css" rel="stylesheet">
+    <link href="css/homepage/infodivs.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,900" rel="stylesheet">
+
 
     <title>Awesome Travels- nobody does it !</title>
   </head>
@@ -41,13 +44,13 @@
 
     <!-- Intro Header -->
     <header class="masthead">
-      <h1 class="heading">Travel Made Simpler test the branch</h1>
+      <h1 class="heading">Travel Made Simpler</h1>
         <a href="#booking" class="btn btn-circle js-scroll-trigger">
           <i class="fa fa-angle-double-down animated"></i>
         </a>
     </header>
 
-    <!-- This section contains the flight booking process-->
+    <!-- This section contains the flight booking process uses infodivs css-->
     <section id="booking">
       <div class="container">
         <div class="top-bar">
@@ -56,6 +59,99 @@
         </div>
       </div>
     </section>
+
+    <section id="flights">
+      <div class = "container-fluid">
+        <div class ="row">
+          <div class = "col-md-8 flightcontainer" id ="fcont1">
+            <div class = "flight row"  id ="fsimple1">
+              <div class = "simpinfo col-10">
+                <img src="icons/plane.png" alt="plane icn"/>
+                <div class = "flighttextcontainer">
+                  <span id="airportcode">LHR</span><span id="timestyle">16:00</span>
+                  <div class = "dividerline">
+                  </div>
+                  <span id="airportcode">LAX</span><span id="timestyle">20:00</span>
+                </div>
+              </div>
+              <button type="button" class="btn btn-info col-2" data-toggle="collapse" data-target="#minfo1">
+                <img src="icons/down-arrow.png" alt="down icn" id="rotatearr1"/>
+              </button>
+            </div>
+            <div class = "moreinfotest collapse" id="minfo1">
+              just testing shit out
+            </div>
+          </div>
+          <div class = "col-md-8 flightcontainer" onMouseOver="showInfo('minfo2', 'fsimple2','fcont2','rotatearr2')" onMouseOut="hideInfo('minfo2', 'fsimple2','fcont2','rotatearr2')" id ="fcont2">
+            <div class = "flight row"  id ="fsimple2">
+              <div class = "simpinfo col-10">
+                <img src="icons/plane.png" alt="plane icn"/>
+                <div class = "flighttextcontainer">
+                  <span id="airportcode">LHR</span><span id="timestyle">16:00</span>
+                  <div class = "dividerline">
+                  </div>
+                  <span id="airportcode">LAX</span><span id="timestyle">20:00</span>
+                </div>
+              </div>
+              <button class = "col-2">
+                <img src="icons/down-arrow.png" alt="down icn" id="rotatearr2"/>
+              </button>
+            </div>
+            <div class = "moreinfo" id="minfo2">
+              just testing shit out
+            </div>
+          </div>
+        <div class = "col-md-8 flightcontainer" onMouseOver="showInfo('minfo3', 'fsimple3','fcont3','rotatearr3')" onMouseOut="hideInfo('minfo3', 'fsimple3','fcont3','rotatearr3')" id ="fcont3">
+          <div class = "flight row"  id ="fsimple3">
+            <div class = "simpinfo col-10">
+              <img src="icons/plane.png" alt="plane icn"/>
+              <div class = "flighttextcontainer">
+                <span id="airportcode">LHR</span><span id="timestyle">16:00</span>
+                <div class = "dividerline">
+                </div>
+                <span id="airportcode">LAX</span><span id="timestyle">20:00</span>
+              </div>
+            </div>
+            <button class = "col-2">
+              <img src="icons/down-arrow.png" alt="down icn" id="rotatearr3"/>
+            </button>
+          </div>
+          <div class = "moreinfo" id="minfo3">
+            <div class = "row minfofirstrow">
+              <div class ="col-3">
+                <span id="airportcode">Tue 13 Mar</span>
+              </div>
+              <div class ="col-6">
+                <span id="airportcode">LHR</span><span id="timestyle">16:00</span>
+                ->
+                <span id="airportcode">LAX</span><span id="timestyle">20:00</span>
+              </div>
+              <div class ="col-3">
+                <span id="airportcode">Economy</span></br>
+                <span id="timestyle">5hrs 00mins</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+
+      </div>
+    </section>
+    <script>
+      var rotate = document.getElementById('rotateonhover');
+      function showInfo(minfo, fsimple, fcont, rotate){
+        document.getElementById(fcont).style.height = "auto";
+        document.getElementById(minfo).style.visibility = "visible";
+        document.getElementById(fsimple).style.borderRadius = "25px 25px 0 0";
+        document.getElementById(rotate).className='over';
+      }
+      function hideInfo(minfo, fsimple, fcont, rotate){
+        document.getElementById(fcont).style.height = "60px";
+        document.getElementById(minfo).style.visibility = "collapse";
+        document.getElementById(fsimple).style.borderRadius = "25px";
+        document.getElementById(rotate).className='out';
+      }
+    </script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
