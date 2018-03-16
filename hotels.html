@@ -15,8 +15,9 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/homepage/navbar.css" rel="stylesheet">
     <link href="css/homepage/header.css" rel="stylesheet">
-    <link href="css/homepage/infodivs.css" rel="stylesheet">
+    <link href="css/homepage/hoteldivs.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--for stars-->
 
 
     <title>Awesome Travels- nobody does it !</title>
@@ -31,8 +32,8 @@
         </div>
         <div class="nav-body">
           <div class="nav-container">
-          <a class="nav-item" href="#booking">Fights</a> |
-          <a class="nav-item" href="">Hotels</a> |
+          <a class="nav-item" href="flights.html">Fights</a> |
+          <a class="nav-item" href="hotels.html">Hotels</a> |
           <a class="nav-item" href="">Taxi</a>
         </div>
         <div class="nav-footer">
@@ -50,8 +51,8 @@
         </a>
     </header>
 
-    <!-- This section contains the flight booking process uses infodivs css-->
-    <section id="booking">
+
+    <section id="booking" style = "background-color: rgba(219,80, 74, 1);">
       <div class="container">
         <div class="top-bar">
         </div>
@@ -60,18 +61,34 @@
       </div>
     </section>
 
-    <section id="flights">
+    <section id="hotels">
       <div class = "container-fluid">
         <div class ="row">
-          <div class = "col-6 flightcontainer" id ="fcont1">
-            <div class = "flight row"  id ="fsimple1">
+          <div class = "col-8 hotelcontainer" id ="fcont1">
+            <div class = "hotel row"  id ="fsimple1">
               <div class = "simpinfo col-10">
-                <img src="icons/plane.png" alt="plane icn"/>
-                <div class = "flighttextcontainer">
-                  <span id="airportcode">LHR</span><span id="timestyle">16:00</span>
-                  <div class = "dividerline">
+                <div class = "row" style="margin:0; padding: 0;">
+                  <div class = "col-2">
+                    <img src="icons/hotel.png"class="img-fluid mx-auto d-block" alt="hotel icn"/>
                   </div>
-                  <span id="airportcode">LAX</span><span id="timestyle">20:00</span>
+                  <div class = "hoteltextcontainer col-4">
+                      <div class="text-center" style="margin-top:15px;">
+                        <span id="airportcode">Marlin Hotel</span></br>
+                        <span id="timestyle">Los Angeles</span>
+                      </div>
+                  </div>
+                  <div class = "starratings col-3">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                  <div class = "price col-3" >
+                    <span id="airportcode">£95/night</span></br>
+                  </div>
+
+
                 </div>
               </div>
               <button class = "col-2"  onclick="toggleinfo('minfo1', 'fsimple1','fcont1','rotatearr1')">
@@ -124,15 +141,31 @@
           </div>
         </div>
         <div class ="row">
-          <div class = "col-6 flightcontainer" id ="fcont2">
-            <div class = "flight row"  id ="fsimple2">
+          <div class = "col-8 hotelcontainer" id ="fcont2">
+            <div class = "hotel row"  id ="fsimple2">
               <div class = "simpinfo col-10">
-                <img src="icons/plane.png" alt="plane icn"/>
-                <div class = "flighttextcontainer">
-                  <span id="airportcode">LHR</span><span id="timestyle">16:00</span>
-                  <div class = "dividerline">
+                <div class = "row" style="margin:0; padding: 0;">
+                  <div class = "col-2">
+                    <img src="icons/hotel.png"class="img-fluid mx-auto d-block" alt="hotel icn"/>
                   </div>
-                  <span id="airportcode">LAX</span><span id="timestyle">20:00</span>
+                  <div class = "hoteltextcontainer col-4">
+                      <div class="text-center" style="margin-top:15px;">
+                        <span id="airportcode">Marlin Hotel</span></br>
+                        <span id="timestyle">Los Angeles</span>
+                      </div>
+                  </div>
+                  <div class = "starratings col-3">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                  <div class = "price col-3" >
+                    <span id="airportcode">£95/night</span></br>
+                  </div>
+
+
                 </div>
               </div>
               <button class = "col-2"  onclick="toggleinfo('minfo2', 'fsimple2','fcont2','rotatearr2')">
@@ -185,21 +218,37 @@
           </div>
         </div>
         <div class = "row">
-          <div class = "col-6 flightcontainer" id ="fcont3">
-          <div class = "flight row"  id ="fsimple3">
-            <div class = "simpinfo col-10">
-              <img src="icons/plane.png" alt="plane icn"/>
-              <div class = "flighttextcontainer">
-                <span id="airportcode">LHR</span><span id="timestyle">16:00</span>
-                <div class = "dividerline">
+          <div class = "col-8 hotelcontainer" id ="fcont3">
+            <div class = "hotel row"  id ="fsimple3">
+              <div class = "simpinfo col-10">
+                <div class = "row" style="margin:0; padding: 0;">
+                  <div class = "col-2">
+                    <img src="icons/hotel.png"class="img-fluid mx-auto d-block" alt="hotel icn"/>
+                  </div>
+                  <div class = "hoteltextcontainer col-4">
+                      <div class="text-center" style="margin-top:15px;">
+                        <span id="airportcode">Marlin Hotel</span></br>
+                        <span id="timestyle">Los Angeles</span>
+                      </div>
+                  </div>
+                  <div class = "starratings col-3">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                  <div class = "price col-3" >
+                    <span id="airportcode">£95/night</span></br>
+                  </div>
+
+
                 </div>
-                <span id="airportcode">LAX</span><span id="timestyle">20:00</span>
               </div>
+              <button class = "col-2" onclick="toggleinfo('minfo3', 'fsimple3','fcont3','rotatearr3')">
+                <img src="icons/down-arrow.png" alt="down icn" id="rotatearr3"/>
+              </button>
             </div>
-            <button class = "col-2" onclick="toggleinfo('minfo3', 'fsimple3','fcont3','rotatearr3')">
-              <img src="icons/down-arrow.png" alt="down icn" id="rotatearr3"/>
-            </button>
-          </div>
           <div class = "moreinfo col" id="minfo3" style = "visibility: collapse;">
             <div class = "row minforow">
               <div class ="col-3">
