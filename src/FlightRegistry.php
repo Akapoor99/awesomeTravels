@@ -1,4 +1,5 @@
 <?php
+require 'Flight.php';
 
 class FlightRegistry
 {

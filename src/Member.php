@@ -1,6 +1,7 @@
 <?php
-require("PaymentInfo.php");
-require("ContactInfo.php");
+require 'Customer.php';
+require 'PaymentInfo.php';
+require 'ContactInfo.php';
 
 class Member extends Customer
 {

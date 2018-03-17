@@ -1,4 +1,5 @@
 <?php
+require 'Hotel.php';
 
 class HotelBooking
 {

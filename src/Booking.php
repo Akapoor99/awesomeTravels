@@ -1,7 +1,7 @@
 <?php 
-require("FlightBooking.php");
-require("HotelBooking.php");
-require("TaxiService.php");
+require 'FlightBooking.php';
+require 'HotelBooking.php';
+require 'TaxiService.php';
 
 class Booking
 {
