@@ -7,23 +7,19 @@ class MemberRegistry
     settype($membersList, "array");
 
     private function __construct(){
-
+        $this->membersList = array();
     }
 
     public static function getInstance(){
-      if (!isset(self::$instance)) {
+        if (!isset(self::$instance)) {
             self::$instance = new MemberRegistry();
         }
         return self::$instance;
     }
 
     function addMember($newMember){
-      if(empty($this->membersList)){
-        $this->membersList = array(hash("sha256", $newMember->getUsername()) => $newMember);
-      }    
-      else{
         $this->membersList[hash("sha256", $newMember->getUsername())] = $newMember;
-      }
+      
     }
 
     function searchMembers($targetName){
@@ -31,7 +27,7 @@ class MemberRegistry
     }
 
     function loginMembers($username, $password){
-        $member = self->searchMembers($username);
+        $member = self::searchMembers($username);
         if($member->checkUserName($username) && $member->checkPassword($password)){
             return true;
         }

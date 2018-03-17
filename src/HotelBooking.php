@@ -7,20 +7,27 @@ class HotelBooking
 	settype($hotelRooms, "array");
 	private $numberOfPeople;
 	settype($numberOfPeople, "int");
+	private $startDate;
 	private $duration;
+	settype($duration, "int");
 	private $price;
 	settype($price, "float");
 
-	function __construct($_hotel, $_rooms. $_number, $_duration, $_price){
+	function __construct($_hotel, $_rooms. $_number, $_start, $_duration, $_price){
 		$this->hotel = $_hotel;
 		$this->hotelRooms = $_rooms;
 		$this->numberOfPeople = $_number;
 		$this->duration = $_duration;
+		$this->startDate = new DateTime($_start);
 		$this->price = $_price;
 	}
 
 	function getHotelInfo(){
 		return $this->hotel->getAllInfo();
+	}
+
+	function getStartDate(){
+		return $this->startDate;
 	}
 
 	function getRooms(){

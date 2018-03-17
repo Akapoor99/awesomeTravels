@@ -5,6 +5,7 @@ class Flight
 	private $flightNumber;
 	settype($flightNumber, "string");
 	private $availabaleSeats;
+	private $flightDate;
 	settype($availabaleSeats, "integer");
 	private $departureLocation;
 	settype($departureLocation, "string");
@@ -17,9 +18,10 @@ class Flight
 	private $airline;
 	settype($airline, "string");
 
-	function __construct($number, $seats, $dlocation, $dtime, $alocation, $atime, $air){
+	function __construct($number, $seats, $fdate, $dlocation, $dtime, $alocation, $atime, $air){
 		$this->flightNumber = $number;
 		$this->availabaleSeats = $seats;
+		$this->flightDate = new DateTime($fdate);
 		$this->departureLocation = $dlocation;
 		$this->departureTime = new DateTime($dtime);
 		$this->arrivalLocation = $alocation;
@@ -28,7 +30,7 @@ class Flight
 	}
 
 	function getAllInfo(){
-		$allInfo = array($this->flightNumber, $this->availabaleSeats, $this->departureLocation, $this->departureTime->format('Y-m-d H:i:s'), $this->arrivalLocation, $this->arrivalTime->format('Y-m-d H:i:s'), $this->airline);
+		$allInfo = array($this->flightNumber, $this->availabaleSeats,$this->flightDate, $this->departureLocation, $this->departureTime->format('Y-m-d H:i:s'), $this->arrivalLocation, $this->arrivalTime->format('Y-m-d H:i:s'), $this->airline);
 		return $allInfo;
 	}
 
@@ -45,7 +47,17 @@ class Flight
 	}
 
 	
+	function getDate(){
+		return $this->flightDate;
+	}
 
+	function getDepartureLocation(){
+		return $this->departureLocation;
+	}
+
+	function getArrivalLocation(){
+		return $this->arrivalLocation;
+	}
 }
 
 ?>
