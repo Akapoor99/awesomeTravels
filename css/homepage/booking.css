@@ -1,0 +1,134 @@
+#booking{
+  width:100%;
+  height:90%;
+  background-color: rgba(75,75,75,1);
+}
+
+.booking-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.top-bar{
+  width: 100%;
+  height: 10%;
+  background-color: rgba(200,200,200,1);
+}
+
+/*#searchBar {
+  font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: white;
+  color: black;
+}
+  #searchBar .navbar-brand {
+    font-weight: 700; }
+  #searchBar a {
+    color: black;
+  }
+  #searchBar .nav-body{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+  }
+  #searchBar .nav-container{
+    font-weight: bold;
+    align-items: center;
+    align-content: center;
+  }
+  #searchBar .nav-item{
+    color: rgba(255,255,255,1);
+    outline: none;
+  }
+  #searchBar .nav-item:hover {
+    color: rgba(210,210,210,1);
+    text-decoration: none;
+    }
+  @media (min-width: 992px) {
+    #searchBar {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      -webkit-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+      -moz-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+      transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+      letter-spacing: 1px;
+      border-bottom: none;
+      background-color: white;}
+      #searchBar.sbar-change {
+        padding-top: 21px;
+        padding-bottom: 21px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        background: transparent;
+      bottom: 0;}
+    }
+
+#searchBar .btn-login{
+  margin-left: 20px;
+  background-color: rgba(255, 0, 0, 0.5);
+  border-radius: 10px 10px 10px 10px;
+  font-weight: bold;
+  color: white;
+  border: 0px;
+  padding: 2px 15px 4px 15px;
+}
+#searchBar .btn-login:hover{
+  background-color: rgba(255, 0, 0, 0.73);
+  transform: scale(1.03);
+}*/
+
+#searchBar {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  background-color: #333;
+  font-size: 17px;
+  padding: 10px;
+}
+
+input[type=text], select {
+    width: 180px;
+    margin: 15px;
+    padding-left: 5px;
+    display: inline-block;
+    cursor: pointer;
+    border: 0px;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+}
+#searchBar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#searchBar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#searchBar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#searchBar.content {
+  padding: 16px;
+}
+
+#searchBar.sticky {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: transparent;
+}
+
+.sticky + .content {
+  padding-bottom: : 60px;
+}

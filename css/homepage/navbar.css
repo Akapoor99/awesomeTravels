@@ -39,6 +39,11 @@
       letter-spacing: 1px;
       border-bottom: none;
       background: transparent;}
+      #mainNav.navbar-change {
+        padding-top: 21px;
+        padding-bottom: 21px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        background: black; }
     }
 
 #mainNav .btn-login{

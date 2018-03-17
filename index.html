@@ -15,6 +15,7 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/homepage/navbar.css" rel="stylesheet">
     <link href="css/homepage/header.css" rel="stylesheet">
+    <link href="css/homepage/booking.css" rel="stylesheet">
 
     <title>Awesome Travels- nobody does it better !</title>
   </head>
@@ -24,34 +25,38 @@
     <nav class="navbar navbar-light fixed-top" id="mainNav">
       <div class="container">
         <div class="nav-head">
-          <a class="navbar-brand">Awesome Travels</a>
+          <a href="#" class="navbar-brand">Awesome Travels</a>
         </div>
         <div class="nav-body">
           <div class="nav-container">
-          <a class="nav-item" href="#booking">Fights</a> |
-          <a class="nav-item" href="">Hotels</a> |
-          <a class="nav-item" href="">Taxi</a>
+          <a class="nav-item js-scroll-trigger" href="#booking">Fights</a> |
+          <a class="nav-item" href="#">Hotels</a> |
+          <a class="nav-item" href="#">Taxi</a>
         </div>
         <div class="nav-footer">
-          <button class="btn-login">Log in</button>
+          <button class="btn-login ">Log in</button>
         </div>
       </div>
       </div>
     </nav>
 
     <!-- Intro Header -->
-    <header class="masthead">
+    <header id="top" class="masthead">
       <h1 class="heading">Travel Made Simpler</h1>
-        <a href="#booking" class="btn btn-circle js-scroll-trigger">
+        <a href="#searchBar" class="btn btn-circle js-scroll-trigger">
           <i class="fa fa-angle-double-down animated"></i>
         </a>
     </header>
 
     <!-- This section contains the flight booking process-->
     <section id="booking">
-      <div class="container">
-        <div class="top-bar">
+      <div class="booking-container">
+        <a href="#booking">
+        <div id="searchBar">
+          <input type="text" name="piontA" placeholder="From">
+          <input type="text" name="piontB" placeholder="To">
         </div>
+      </a>
         <div class="">
         </div>
       </div>
@@ -62,5 +67,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/navBarScroll.js"></script>
+    <script src="js/searchBarScroll.js"></script>
   </body>
 </html>
