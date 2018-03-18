@@ -6,6 +6,7 @@ class MemberRegistry
     private static $instance;
     private $membersList;
     settype($membersList, "array");
+    private $blacklist;
 
     private function __construct(){
         $this->membersList = array();
