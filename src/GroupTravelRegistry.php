@@ -5,11 +5,11 @@ class GroupTravelRegistry
 {
 	private $instance;
 	private $participantListUnder21;
-	settype($participantListUnder21, "array");
+	//settype($participantListUnder21, "array");
 	private $participantList21to25;
-	settype($participantList21to25, "array");
+	//settype($participantList21to25, "array");
 	private $participantList26to30;
-	settype($participantList26to30, "array");
+	//settype($participantList26to30, "array");
 
 	function __construct(){
 		$this->participantListUnder21 = array();
@@ -45,7 +45,7 @@ class GroupTravelRegistry
 				}
 			}
 			return $filterResults;
-		}	
+		}
 		else if($member->getAge() >= 21 && $member->getAge() <=25){
 			foreach ($participantList21to25 as $value) {
 				if($value->getUsername() != $member->getUsername()){
@@ -65,7 +65,7 @@ class GroupTravelRegistry
 	}
 
 	function filterByLocation($location){
-		
+
 	}
 }
 

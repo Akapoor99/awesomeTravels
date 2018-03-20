@@ -5,14 +5,14 @@ class HotelBooking
 {
 	private $hotel;
 	private $hotelRooms;
-	settype($hotelRooms, "array");
+	//settype($hotelRooms, "array");
 	private $numberOfPeople;
-	settype($numberOfPeople, "int");
+	//settype($numberOfPeople, "int");
 	private $startDate;
 	private $duration;
-	settype($duration, "int");
+	//settype($duration, "int");
 	private $price;
-	settype($price, "float");
+	//settype($price, "float");
 
 	function __construct($_hotel, $_rooms. $_number, $_start, $_duration, $_price){
 		$this->hotel = $_hotel;

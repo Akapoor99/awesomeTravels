@@ -3,20 +3,20 @@
 class Flight
 {
 	private $flightNumber;
-	settype($flightNumber, "string");
+	//settype($flightNumber, "string");
 	private $availabaleSeats;
 	private $flightDate;
-	settype($availabaleSeats, "integer");
+	//settype($availabaleSeats, "integer");
 	private $departureLocation;
-	settype($departureLocation, "string");
+	//settype($departureLocation, "string");
 	private $departureTime;
 	//settype($departureTime, "string");
 	private $arrivalLocation;
-	settype($arrivalLocation, "string");
+	//settype($arrivalLocation, "string");
 	private $arrivalTime;
 	//settype($arrivalTime, "string");
 	private $airline;
-	settype($airline, "string");
+	//settype($airline, "string");
 
 	function __construct($number, $seats, $fdate, $dlocation, $dtime, $alocation, $atime, $air){
 		$this->flightNumber = $number;
@@ -46,7 +46,7 @@ class Flight
 		return $this->flightNumber;
 	}
 
-	
+
 	function getDate(){
 		return $this->flightDate;
 	}

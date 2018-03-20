@@ -5,7 +5,7 @@ class MemberRegistry
 {
     private static $instance;
     private $membersList;
-    settype($membersList, "array");
+    //settype($membersList, "array");
     private $blacklist;
 
     private function __construct(){
@@ -21,7 +21,7 @@ class MemberRegistry
 
     function addMember($newMember){
         $this->membersList[hash("sha256", $newMember->getUsername())] = $newMember;
-      
+
     }
 
     function searchMembers($targetName){

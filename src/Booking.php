@@ -1,4 +1,4 @@
-<?php 
+<?php
 require 'FlightBooking.php';
 require 'HotelBooking.php';
 require 'TaxiService.php';
@@ -6,11 +6,14 @@ require 'TaxiService.php';
 class Booking
 {
 	private $flightBookings;
-	settype($flightBookings, "array");
 	private $hotelBookings;
-	settype($hotelBookings, "array");
 	private $taxiHires;
-	settype($taxiHires, "array");
+
+	function __construct(){
+		settype($flightBookings, "array");
+		settype($hotelBookings, "array");
+	  settype($taxiHires, "array");
+	}
 
 	function addFlightBooking($newFlightBooking){
 		$this->flightBookings[] = $newFlightBooking;

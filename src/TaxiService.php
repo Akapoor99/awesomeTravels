@@ -3,13 +3,13 @@
 class TaxiService
 {
   private $pickupLocation;
-  settype($pickupLocation, "string");
+  //settype($pickupLocation, "string");
   private $destination;
-  settype($destination, "string");
+  //settype($destination, "string");
   private $numberOfPassengers;
   settype($numberOfPassengers, "int");
   private $price;
-  settype($price, "float");
+  //settype($price, "float");
 
   function __construct($pickup, $dest, $number, $_price){
     $this->pickupLocation = $pickup;

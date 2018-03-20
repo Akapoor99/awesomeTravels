@@ -3,13 +3,13 @@
 class PaymentInfo
 {
 	private $cardNumber;
-	settype($cardNumber, "string");
+	//settype($cardNumber, "string");
 	private $expirationMonth;
-	settype($expirationMonth, "string");
+	//settype($expirationMonth, "string");
 	private $expirationYear;
-	settype($expirationYear, "string");
+	//settype($expirationYear, "string");
 	private $name;
-	settype($name, "string");
+	//settype($name, "string");
 
 	function __construct($cardNum, $expMonth, $expYear, $name){
 		$this->cardNumber = $cardNum;

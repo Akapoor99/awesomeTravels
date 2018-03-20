@@ -4,7 +4,6 @@ require 'Flight.php';
 class FlightRegistry
 {
 	private $flightList;
-	settype($flightList, "array");
 	private $instance;
 
 	private function __construct(){

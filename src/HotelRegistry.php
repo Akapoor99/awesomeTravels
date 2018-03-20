@@ -4,7 +4,7 @@ require 'Hotel.php';
 class HotelRegistry
 {
 	private $hotelList;
-	settype($hotelList, "array");
+	//settype($hotelList, "array");
 	private $instance;
 
 	private function __construct(){

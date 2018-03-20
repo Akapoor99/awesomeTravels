@@ -4,11 +4,11 @@ require("Booking.php");
 class Customer
 {
 	protected $customerID;
-	settype($customerID, "string");
 	protected $bookings;
-	settype($bookings, "array");
 
 	function __construct(){
+		//settype($customerID, "string");
+		//settype($bookings, "array");
 		$this->customerID = uniqid("", true);
 	}
 
