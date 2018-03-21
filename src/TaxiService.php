@@ -7,7 +7,7 @@ class TaxiService
   private $destination;
   //settype($destination, "string");
   private $numberOfPassengers;
-  settype($numberOfPassengers, "int");
+  //settype($numberOfPassengers, "int");
   private $price;
   //settype($price, "float");
 
