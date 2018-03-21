@@ -14,7 +14,7 @@ class HotelBooking
 	private $price;
 	//settype($price, "float");
 
-	function __construct($_hotel, $_rooms. $_number, $_start, $_duration, $_price){
+	function __construct($_hotel, $_rooms, $_number, $_start, $_duration, $_price){
 		$this->hotel = $_hotel;
 		$this->hotelRooms = $_rooms;
 		$this->numberOfPeople = $_number;
