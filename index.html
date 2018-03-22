@@ -30,9 +30,10 @@
         </div>
         <div class="nav-body">
           <div class="nav-container">
-          <a class="nav-item" href="flights.html">Fights</a> |
+          <a class="nav-item" href="index.html">Fights</a> |
           <a class="nav-item" href="hotels.html">Hotels</a> |
-          <a class="nav-item" href="">Taxi</a>
+          <a class="nav-item" href="taxis.html">Taxi</a> |
+          <a class="nav-item" href="complete.html">Complete</a>
         </div>
         <div class="nav-footer">
           <button class="btn-login">Log in</button>
@@ -50,23 +51,45 @@
     </header>
 
     <!-- This section contains the flight booking process uses infodivs css-->
-    <section id="booking">
-      <div class="container">
-        <div class="top-bar">
+    <section id="booking" style = "background-color: rgba(46, 196, 182, 1);">
+      <div class="booking-container">
+        <a href="#booking">
+        <div id="searchBar">
+          <div class="location">
+            <img src="src/flight-icon.png" class="icon"/>
+            <input type="text" name="piontA" placeholder="From">
+            <i class="switchAB fa fa-exchange icon"></i>
+            <input type="text" name="piontB" placeholder="To">
+          </div>
+          <div class="date">
+            <i class="fa fa-calendar icon" ></i>
+            <input type="text" id="departureDpicker" placeholder="start">
+            <i class="switchDates fa fa-exchange icon"></i>
+          <input type="text" id="returnDpicker" placeholder="end">
         </div>
+          <i class="fa fa-search icon"></i>
+        </div>
+      </a>
         <div class="">
         </div>
       </div>
     </section>
 
     <section id="flights">
+      <div id="bigtitle" style = "margin-bottom: 30px;">
+        <span>Flights</span>
+      </div>
       <div class = "container-fluid">
         <div id = "target">
 
         </div>
 
       </div>
-
+      <div class = "row" style="padding:0;">
+        <div class="progress offset-3 col-6" style="width:50%; margin-bottom: 50px; height: 30px; padding:0;">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">flights</div>
+        </div>
+      </div>
     </section>
     <script>
       rotate = document.getElementById('rotateonhover');
