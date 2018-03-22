@@ -16,90 +16,54 @@
   background-color: rgba(200,200,200,1);
 }
 
-/*#searchBar {
-  font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  margin-bottom: 0;
-  text-transform: uppercase;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  background-color: white;
-  color: black;
-}
-  #searchBar .navbar-brand {
-    font-weight: 700; }
-  #searchBar a {
-    color: black;
-  }
-  #searchBar .nav-body{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-content: center;
-  }
-  #searchBar .nav-container{
-    font-weight: bold;
-    align-items: center;
-    align-content: center;
-  }
-  #searchBar .nav-item{
-    color: rgba(255,255,255,1);
-    outline: none;
-  }
-  #searchBar .nav-item:hover {
-    color: rgba(210,210,210,1);
-    text-decoration: none;
-    }
-  @media (min-width: 992px) {
-    #searchBar {
-      padding-top: 20px;
-      padding-bottom: 20px;
-      -webkit-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
-      -moz-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
-      transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
-      letter-spacing: 1px;
-      border-bottom: none;
-      background-color: white;}
-      #searchBar.sbar-change {
-        padding-top: 21px;
-        padding-bottom: 21px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-        background: transparent;
-      bottom: 0;}
-    }
-
-#searchBar .btn-login{
-  margin-left: 20px;
-  background-color: rgba(255, 0, 0, 0.5);
-  border-radius: 10px 10px 10px 10px;
-  font-weight: bold;
-  color: white;
-  border: 0px;
-  padding: 2px 15px 4px 15px;
-}
-#searchBar .btn-login:hover{
-  background-color: rgba(255, 0, 0, 0.73);
-  transform: scale(1.03);
-}*/
-
 #searchBar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: transparent;
   display: flex;
   flex-direction: row;
   overflow: hidden;
-  background-color: #333;
   font-size: 17px;
   padding: 10px;
+  align-items: center;
+}
+.flight-icon{
+  color: white;
+  width: 20px;
+  height: 20px;
+}
+.icon{
+  color: white;
+  width: 25px;
+  height: 25px;
+}
+#searchBar i{
+  color: white;
+  text-decoration: none;
+}
+#searchBar i:hover {
+  transform: scale(1.1);
+  text-decoration: none;
+}
+#searchBar img:hover {
+  transform: scale(1.1);
+  text-decoration: none;
 }
 
 input[type=text], select {
     width: 180px;
     margin: 15px;
+    color: white;
     padding-left: 5px;
     display: inline-block;
     cursor: pointer;
     border: 0px;
+    border-left: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     background: transparent;
 }
-#searchBar a {
+#searchBar a{
   float: left;
   display: block;
   color: #f2f2f2;
@@ -123,12 +87,28 @@ input[type=text], select {
 }
 
 #searchBar.sticky {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: transparent;
+  position: absolute;
+  bottom: auto;
+display: flex;
+flex-direction: row;
+overflow: hidden;
+background-color: #333;
+font-size: 17px;
+padding: 10px;
+align-items: center;
 }
 
 .sticky + .content {
   padding-bottom: : 60px;
+}
+.location{
+  color: white;
+  margin: 10px 10px 10px 100px;
+}
+.date{
+  color: white;
+  margin: 10px 10px 10px 120px;
+}
+.fa-search{
+  margin: 10px;
 }
