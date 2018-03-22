@@ -60,9 +60,17 @@ class Flight
 	function getDepartureLocation(){
 		return $this->departureLocation;
 	}
+	
+	function getDepartureTime(){
+		return $this->departureTime;
+	}
 
 	function getArrivalLocation(){
 		return $this->arrivalLocation;
+	}
+	
+	function getArrivalTime(){
+		return $this->arrivalTime;
 	}
 	
 	function getAirline(){
