@@ -3,17 +3,17 @@
 class ContactInfo
 {
 	private $firstName;
-	settype($firstName, "string");
 	private $lastName;
-	settype($lastName, "string");
 	private $email;
-	settype($email, "string");
 	private $phoneNumber;
-	settype($phoneNumber, "string");
 	private $address;
-	settype($address, "array");
 
 	function __construct($f, $l, $e, $p){
+		//settype($firstName, "string");
+		//settype($lastName, "string");
+		//settype($email, "string");
+		//settype($phoneNumber, "string");
+		//settype($address, "array");
 		$this->firstName = $f;
 		$this->lastName = $l;
 		$this->email = $e;

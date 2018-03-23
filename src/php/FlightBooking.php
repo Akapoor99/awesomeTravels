@@ -1,14 +1,15 @@
 <?php
+require 'Flight.php';
 
 class FlightBooking
 {
 	private $flight;
 	private $flightTicketID;
-	settype($flightTicketID, "string");
+	//settype($flightTicketID, "string");
 	private $price;
-	settype($price, "float");
+	//settype($price, "float");
 	private $porterService;
-	settype($porterService, "boolean");
+	//settype($porterService, "boolean");
 
 	function __construct($_flight, $_ID, $_price, $_porter){
 		$this->flight = $_flight;

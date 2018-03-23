@@ -1,17 +1,18 @@
 <?php
-require("PaymentInfo.php");
-require("ContactInfo.php");
+require 'Customer.php';
+require 'PaymentInfo.php';
+require 'ContactInfo.php';
 
 class Member extends Customer
 {
 	private $userName;
-	settype($userName, "string");
+	//settype($userName, "string");
 	private $password;
-	settype($password, "string");
+	//settype($password, "string");
 	private $paymentInfo;
 	private $contactInfo;
 	private $age;
-	settype($age, "int");
+	//settype($age, "int");
 
 	function __construct($u, $p, $a, $fn, $ln, $e, $pn){
 		parent::__construct();
@@ -28,6 +29,10 @@ class Member extends Customer
 		else{
 			$paymentInfo = new PaymentInfo($cn, $em, $ey, $n);
 		}
+	}
+
+	function getUsername(){
+		return $this->userName;
 	}
 
 	function changePassword($newPassword){

@@ -3,11 +3,11 @@
 class Hotel
 {
 	private $hotelName;
-	settype($hotelName, "string");
+	//settype($hotelName, "string");
 	private $location;
-	settype($location, "string");
+	//settype($location, "string");
 	private $availableRooms;
-	settype($availableRooms, "array");
+	//settype($availableRooms, "array");
 
 	function __construct($name, $loc, $rooms){
 		$this->hotelName = $name;
