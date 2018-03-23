@@ -18,6 +18,10 @@ class HotelRegistry
 		return self::$instance;
 	}
 
+	function addHotel($newHotel){
+		$this->hotelList[] = $newHotel;
+	}
+
 	function searchHotels($location){
 		$searchResults = array();
 		foreach ($$hotelList as $value) {

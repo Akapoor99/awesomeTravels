@@ -31,4 +31,16 @@ $flightRegistry->addFlight($flight4);
 $sFR = serialize($flightRegistry);
 file_put_contents('FlightRegistryStore', $sFR);
 
+$hotel1 = new Hotel('Hotel French-name', 'Paris', 52);
+$hotel2 = new Hotel('Some British Place', 'Hull', 27);
+$hotel3 = new Hotel('More French Names', 'Paris', 30);
+$hotel4 = new Hotel('One More Hotel', 'Paris', 100);
+$hotelRegistry = HotelRegistry::getInstance();
+$hotelRegistry->addHotel($hotel1);
+$hotelRegistry->addHotel($hotel2);
+$hotelRegistry->addHotel($hotel3);
+$hotelRegistry->addHotel($hotel4);
+$sHR = serialize($hotelRegistry);
+file_put_contents('HotelRegistryStore', $sHR);
+
 ?>
