@@ -77,6 +77,7 @@
 
 
     <!-- Flight Booking Tab-->
+    <form action="flights.html">
     <div class="bookingBox" id="Flights">
 
         <div class="box-container">
@@ -120,15 +121,15 @@
           </div>
 
             <div class="body-bar">
-              <input type="text" id="departureDpicker" placeholder="Departure">
+              <input type="text" name="departureDate" id="departureDpicker" placeholder="Departure">
             <i class="fa fa-calendar icon" ></i>
-              <input type="text" id="returnDpicker" placeholder="Return">
+              <input type="text" name="returnDate" id="returnDpicker" placeholder="Return">
             </div>
 
               <div class="body-bar">
-                <input type="number" id="numOfPass" placeholder="Passengers">
+                <input type="number" name="passengers" id="numOfPass" placeholder="Passengers">
               <i class="fa fa-plane icon" ></i>
-                <select id="class">
+                <select name="classType" id="class">
                   <option>Economy</object>
                   <option>Business</option>
                   <option>First</option>
@@ -138,12 +139,15 @@
             </div>
             <a href="flights.html">
             <div class="footer-book" >
+              <button type="submit">
               <i class="fa fa-search"> Go </i>
+            </button>
             </div>
           </a>
 
           </div>
         </div>
+      </form>
 
           <!-- Hotels Booking Tab-->
           <div class="bookingBox" id="Hotels">

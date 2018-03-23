@@ -53,9 +53,97 @@
       </div>
     </section>
 
+
     <section id="flights">
       <div class = "container-fluid">
-        <div class ="row">
+
+<!--require 'src/php/Flight.php';
+require 'src/php/FlightRegistry.php';
+$pointA = $_POST["flightFrom"];
+$pointB = $_POST["flightTo"];
+$dateStart = $_POST["departureDate"];
+$dateEnd = $_POST["returnDate"];
+$numOfP = $_POST["passengers"];
+$class = $_POST["classType"];
+$fRegS = file_get_contents('flightRegistryStore');
+$flightRegistry = unserialize('$fRegS');
+$searchResults = $flightRegistry->searchFlights($dateStart, $pointA, $pointB);
+  $airportD =" Lon";
+for($i=0;$i<=3;$i++)$searchResults as $flight) {
+  $flight->getAirportDeparture();
+  $airportA = $flight->getAirportArrival();
+  $airline = $flight->getAirline();
+  $price = $flight->getPrice();
+  $date = $flight->getDate();
+  $depTime = $flight->getDepartureTime();
+  $arrTime = $flight->getArrivalTime();
+  ?>-->
+<div class ="row">
+<div class = "col-8 flightcontainer" id ="fcont".$i.">
+      <div class = "flight row"  id ="fsimple'.$i.'"">
+        <div class = "simpinfo col-10">
+          <img src="icons/plane.png" alt="plane icn"/>
+          <div class = "flighttextcontainer">
+            <span id="airportcode">
+              <?php
+              echo "LON";
+              ?></span><span id="timestyle">16:00</span>
+            <div class = "dividerline">
+            </div>
+            <span id="airportcode">LAX</span><span id="timestyle">20:00</span>
+          </div>
+        </div>
+        <button class = "col-2"  onclick="toggleinfo('minfo'.$i.'', 'fsimple'.$i.''','fcont'.$i.''','rotatearr'.$i.''')">
+          <img src="icons/down-arrow.png" alt="down icn" id="rotatearr".$i""/>
+        </button>
+      </div>
+      <div class = "moreinfo col" id="minfo'.$i.'" style = "visibility: collapse;">
+        <div class = "row minforow">
+          <div class ="col-3">
+            <span id="airportcode">Tue 13 Mar</span>
+          </div>
+          <div class ="col-6">
+            <div class = "row">
+              <div class = "col-5">
+                <span id="airportcode">LHR</span></br>
+                <span id="timestyle">16:00</span>
+              </div>
+              <div class = "col-2" style="padding-left:0; padding-right:0; padding-top: 22px;">
+                <div class = "dividerline" id="divlinminfo"></div>
+              </div>
+              <div class = "col-5">
+                <span id="airportcode">LAX</span></br>
+                <span id="timestyle">20:00</span>
+              </div>
+            </div>
+          </div>
+          <div class ="col-3">
+            <span id="airportcode">Economy</span></br>
+            <span id="timestyle">5hrs 00mins</span>
+          </div>
+        </div>
+        <div class = "row minforow">
+          <div class ="col-3">
+            <img src = "icons/BAlogo.png" />
+          </div>
+          <div class ="col-6">
+            <span id="timestyle">British Airways 824</span> </br>
+            <span id="timestyle">Narrow-body jet Airbus A320-100/200</span> </br>
+            <span id="timestyle">Operated by Aer Lingus</span>
+          </div>
+        </div>
+        <div class = "row minforow">
+          <div class ="col text-center" style="margin-bottom: 20px">
+            <button type="button" class="btn btn-danger">Add To Plan</button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!--      <div class ="row">
           <div class = "col-8 flightcontainer" id ="fcont1">
             <div class = "flight row"  id ="fsimple1">
               <div class = "simpinfo col-10">
@@ -116,6 +204,7 @@
 
           </div>
         </div>
+
         <div class ="row">
           <div class = "col-8 flightcontainer" id ="fcont2">
             <div class = "flight row"  id ="fsimple2">
@@ -236,7 +325,7 @@
             </div>
           </div>
         </div>
-        </div>
+        </div>-->
 
       </div>
     </section>
