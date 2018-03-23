@@ -15,7 +15,4 @@
 
   });
 
-    $( "#departureDpicker" ).datepicker();
-    $( "#returnDpicker" ).datepicker();
-
 })(jQuery);

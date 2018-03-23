@@ -16,62 +16,287 @@
     <link href="css/homepage/navbar.css" rel="stylesheet">
     <link href="css/homepage/header.css" rel="stylesheet">
     <link href="css/homepage/booking.css" rel="stylesheet">
+    <link href="css/homepage/topBar.css" rel="stylesheet">
+    <link href="css/homepage/bookingBox.css" rel="stylesheet">
+    <link href="css/homepage/logIn.css" rel="stylesheet">
 
     <title>Awesome Travels- nobody does it better !</title>
   </head>
-  <body>
+  <body  onload="startTime()">
+    <div class="main_container">
+
+      <!-- TOP BAR Panel -->
+    <nav id="topBar">
+      <div class="lp-topbar">
+      <a href="#">
+        <i class="fa fa-clock-o"></i>
+      </a>
+      |
+      <p id="date"></p>
+      <p id="time"></p>
+      </div>
+        <div class="rp-topbar">
+          <a href="#">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a href="#">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a onclick="openLogin()">
+          <button class="btn-login ">Register | Log in</button>
+        </a>
+          </div>
+    </nav>
+
+    <!--Header-->
+
+
+    <header id="top" class="masthead">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-light fixed-top" id="mainNav">
-      <div class="container">
+    <nav class="navbar navbar-light" id="mainNav">
+
+      <div class="nav-container">
+
         <div class="nav-head">
-          <a href="#" class="navbar-brand">Awesome Travels</a>
+          <a href="#top" class="navbar-brand" onclick="closeBookingType()">Awesome Travels</a>
         </div>
+
         <div class="nav-body">
-          <div class="nav-container">
-          <a class="nav-item js-scroll-trigger" href="#booking">Fights</a> |
-          <a class="nav-item" href="#">Hotels</a> |
-          <a class="nav-item" href="#">Taxi</a>
-        </div>
-        <div class="nav-footer">
-          <button class="btn-login ">Log in</button>
+          <div class="nav-body-container">
+          <a class="nav-item js-scroll-trigger" onclick="openBookingType(event, 'Flights')">Fights | </a>
+          <a class="nav-item" onclick="openBookingType(event, 'Hotels')">Hotels | </a>
+          <a class="nav-item" onclick="openBookingType(event, 'Taxis')">Taxi | </a>
+          <a class="nav-item" href="#">Group Travel |</a>
+          <a class="nav-item" href="#">Contact</a>
         </div>
       </div>
+
       </div>
     </nav>
 
-    <!-- Intro Header -->
-    <header id="top" class="masthead">
-      <h1 class="heading">Travel Made Simpler</h1>
-        <a href="#booking" class="btn btn-circle js-scroll-trigger">
-          <i class="fa fa-angle-double-down animated"></i>
-        </a>
+
+    <!-- Flight Booking Tab-->
+    <div class="bookingBox" id="Flights">
+
+        <div class="box-container">
+
+      <div class="header-bBox" id="flight-booking">
+        <div class="header-item-selected" id="logo flight-booking" onclick="openBookingType(event, 'Flights')">
+            <i class="fa fa-plane"></i>
+        </div>
+        <div class="header-item" id="logo hotel-booking" onclick="openBookingType(event, 'Hotels')">
+            <i class="fa fa-building"></i>
+        </div>
+        <div class="header-item" id="logo taxi-booking" onclick="openBookingType(event, 'Taxis')">
+            <i class="fa fa-car"></i>
+        </div>
+      </div>
+
+      <div class="body-bBox">
+
+        <div class="body-bar">
+          <div class="body-item">
+          <h6>Where you off to ?</h6>
+        </div>
+        </div>
+
+          <div class="body-bar journey">
+            <div class="body-item journey-opt">
+              One-way
+            </div>
+              <div class="body-item journey-opt">
+                Return
+              </div>
+                <div class="body-item journey-opt">
+                  Multi-city
+                </div>
+            </div>
+
+          <div class="body-bar">
+              <input type="text" name="flightFrom" placeholder="From">
+              <i class="switchAB fa fa-exchange icon"></i>
+              <input type="text" name="flightTo" placeholder="To">
+          </div>
+
+            <div class="body-bar">
+              <input type="text" id="departureDpicker" placeholder="Departure">
+            <i class="fa fa-calendar icon" ></i>
+              <input type="text" id="returnDpicker" placeholder="Return">
+            </div>
+
+              <div class="body-bar">
+                <input type="number" id="numOfPass" placeholder="Passengers">
+              <i class="fa fa-plane icon" ></i>
+                <select id="class">
+                  <option>Economy</object>
+                  <option>Business</option>
+                  <option>First</option>
+                </select>
+              </div>
+
+            </div>
+            <a href="flights.html">
+            <div class="footer-book" >
+              <i class="fa fa-search"> Go </i>
+            </div>
+          </a>
+
+          </div>
+        </div>
+
+          <!-- Hotels Booking Tab-->
+          <div class="bookingBox" id="Hotels">
+            <div class="box-container">
+
+            <div class="header-bBox" id="flight-booking">
+              <div class="header-item" id="logo flight-booking" onclick="openBookingType(event, 'Flights')">
+                  <i class="fa fa-plane"></i>
+              </div>
+              <div class="header-item-selected" id="logo hotel-booking" onclick="openBookingType(event, 'Hotels')">
+                  <i class="fa fa-building"></i>
+              </div>
+              <div class="header-item" id="logo taxi-booking" onclick="openBookingType(event, 'Taxis')">
+                  <i class="fa fa-car"></i>
+              </div>
+            </div>
+
+            <div class="body-bBox">
+
+              <div class="body-bar">
+                <div class="body-item">
+                <h6>Where would you like to go?</h6>
+              </div>
+              </div>
+
+                <div class="body-bar">
+                  <div class="body-item">
+                      <input type="text" name="location" placeholder="City / Hotel">
+                </div>
+                </div>
+
+                  <div class="body-bar">
+                    <input type="text" id="departureDpicker" placeholder="Departure">
+                  <i class="fa fa-calendar icon" ></i>
+                    <input type="text" id="returnDpicker" placeholder="Return">
+                  </div>
+
+                    <div class="body-bar">
+                      <input type="number" id="numOfPass" placeholder="Adults">
+                    <i class="fa fa-building icon" ></i>
+                      <input type="number" id="numOfPass" placeholder="Childer 0-5">
+                    </div>
+
+            </div>
+
+            <a href="hotels.html">
+            <div class="footer-book">
+              <i class="fa fa-search"> Book Now </i>
+            </div>
+          </a>
+          </div>
+
+          </div>
+
+                <!-- Taxi Booking Tab-->
+                <div class="bookingBox" id="Taxis">
+                  <div class="box-container">
+
+                  <div class="header-bBox" id="flight-booking">
+                    <div class="header-item" id="logo flight-booking" onclick="openBookingType(event, 'Flights')">
+                        <i class="fa fa-plane"></i>
+                    </div>
+                    <div class="header-item" id="logo hotel-booking" onclick="openBookingType(event, 'Hotels')">
+                        <i class="fa fa-building"></i>
+                    </div>
+                    <div class="header-item-selected" id="logo taxi-booking" onclick="openBookingType(event, 'Taxis')">
+                        <i class="fa fa-car"></i>
+                    </div>
+                  </div>
+
+                  <div class="body-bBox">
+
+                    <div class="body-bar">
+                    <div class="body-item">
+                    <h6>Whereabouts?</h6>
+                  </div>
+                  </div>
+
+                    <div class="body-bar">
+                      <div class="body-item">
+                        <input type="text" name="location" placeholder="City / Hotel">
+                      </div>
+                    </div>
+
+
+                  <div class="body-bar">
+                      <input type="text" name="taxiFrom" placeholder="Pick-up">
+                      <i class="switchAB fa fa-exchange icon"></i>
+                      <input type="text" name="taxiTo" placeholder="Drop-off">
+                  </div>
+
+                      <div class="body-bar">
+                        <input type="text" id="startDate" placeholder="Pick-up date">
+                      <i class="fa fa-calendar icon" ></i>
+                        <input type="text" id="endDate" placeholder="Drop-off date">
+                      </div>
+
+                        <div class="body-bar">
+                          <select id="class">
+                            <option>5:15</object>
+                            <option>4:30</option>
+                            <option>6:45</option>
+                          </select>
+                        <i class="fa fa-clock-o" ></i>
+                          <select id="class">
+                            <option>5:15</object>
+                            <option>4:30</option>
+                            <option>6:45</option>
+                          </select>
+                        </div>
+
+                  </div>
+
+                  <a href="taxis.html">
+                  <div class="footer-book">
+                    <i class="fa fa-search"> Vroom! </i>
+                  </div>
+                </a>
+
+                </div>
+                </div>
+
+                <div class="headeing-content">
+                  <h1 id="content1" class="heading">Travel Made Simpler</h1>
+                  </div>
+                    <a id="content2" href="#booking" class="btn btn-circle js-scroll-trigger">
+                      <i class="fa fa-angle-double-down animated"></i>
+                    </a>
     </header>
 
-    <!-- This section contains the flight booking process-->
-    <section id="booking">
-      <div class="booking-container">
-        <a href="#booking">
-        <div id="searchBar">
-          <div class="location">
-            <img src="src/flight-icon.png" class="icon"/>
-            <input type="text" name="piontA" placeholder="From">
-            <i class="switchAB fa fa-exchange icon"></i>
-            <input type="text" name="piontB" placeholder="To">
+    <section class="login" id="logIn">
+      <div class="loginBox">
+        <div class="logIn_header">
+          <h4>LogIn</h4>
+          <div class="closeLogin">
+            <a onclick="closeLogin()">
+              <i class="fa fa-close"></i>
+            </a>
           </div>
-          <div class="date">
-            <i class="fa fa-calendar icon" ></i>
-            <input type="text" id="departureDpicker" placeholder="start">
-            <i class="switchDates fa fa-exchange icon"></i>
-          <input type="text" id="returnDpicker" placeholder="end">
         </div>
-          <i class="fa fa-search icon"></i>
-        </div>
-      </a>
-        <div class="">
+        <div class="logIn_body">
+          <input class="email" type="text" name="piontA" placeholder="Email">
+          <input class="password" type="password" name="piontA" placeholder="Password">
+          <div clas="register">
+            <input class="submit-btn" type="submit" type="submit" value="Log in">
+              <a class="signUp" href="signUp.html">Create a new account !</a>
+          </div>
         </div>
       </div>
     </section>
+
+  </div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -80,8 +305,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+   <script src="js/datePicker.js"></script>
     <script src="js/navBarScroll.js"></script>
     <script src="js/searchBarScroll.js"></script>
     <script src="js/smoothScroll.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>

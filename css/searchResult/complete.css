@@ -1,0 +1,32 @@
+:root{
+  --completegreen: #7AC943;
+}
+#complete{
+  background-color: white;
+  padding-top: 30px;
+  padding-bottom: 100px;
+}
+.priceContainer{
+  border: 5px solid var(--completegreen);
+  border-radius: 10px;
+}
+.price{
+  border-bottom: dashed 3px var(--completegreen);
+  color: var(--completegreen)
+}
+.total{
+  height: 50px;
+  background-color: var(--completegreen);
+}
+#lastprice{
+  border-style: none;
+}
+#bigtitle{
+  color: var(--completegreen);
+  margin:auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: 'Roboto:300', sans-serif;
+  font-style: italic;
+}

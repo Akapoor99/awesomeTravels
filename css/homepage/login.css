@@ -1,0 +1,105 @@
+#logIn.login{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(100, 100, 100, 0.55);
+  z-index: 50;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.loginBox{
+  position: fixed;
+  top: 200px;
+  width: 500px;
+  height: 250px;
+  background-color: rgba(50, 50, 50, 0.95);
+  box-shadow: 3px 5px 4px 5px rgba(50,50,50,0.55);
+  padding: 10px;
+  padding-left: 15px;
+  margin: 10px;
+  color: white;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+}
+.closeLogin{
+  display: flex;
+  justify-content: flex-end;
+}
+.fa-close{
+  color: white;
+    justify-content: flex-end;
+    font-size: 25px;
+}
+.fa-close:hover{
+  transform: scale(1.2);
+}
+.logIn_header{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.logIn_body{
+  display: flex;
+  flex-direction: column;
+}
+.loginBox h4{
+  font-family: monospace sans-serif;
+  color: rgba(250,250,250,0.9);
+  text-decoration-style: dotted;
+  text-decoration: underline;
+  font-weight: 900;
+  text-shadow: 2px 0.5px rgba(200,0,0,0.9);
+}
+
+#logIn input[type=text], select .email{
+    width: 180px;
+    margin: 15px;
+    color: white;
+    padding-left: 5px;
+    display: inline-block;
+    cursor: text;
+    border: 0px;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+}
+
+#logIn input[type=password], select .password{
+    width: 180px;
+    margin: 15px;
+    color: white;
+    padding-left: 5px;
+    display: inline-block;
+    cursor: text;
+    border: 0px;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+}
+#logIn .submit-btn{
+  width: 100px;
+  height: 30px;
+  margin: 15px;
+  border: 0px;
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 2px 2px 4px #000000;
+  background-color: rgba(254,194,34,0.95);
+}
+#logIn .submit-btn:hover{
+  transform: scale(1.05);
+  box-shadow: 5px 5px 7px #000000;
+}
+#logIn .register{
+  display: flex;
+  flex-direction: row;
+}
+#logIn .signUp{
+  font-weight: 200;
+  align-self: center;
+  margin-left: 150px;
+}
+#logIn a{
+  color: white;
+  margin: 15px;
+}
