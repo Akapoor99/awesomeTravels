@@ -23,7 +23,7 @@ class FlightRegistry
 
 	function searchFlights($_date, $dloc, $aloc){
 		$searchResults = array();
-		foreach ($flightList as $value) {
+		foreach ($this->flightList as $value) {
 			if($value->getDate()==$_date && $value->getDepartureLocation()==$dloc && $value->getArrivalLocation()==$aloc){
 				$searchResults[] = $value;
 			}
