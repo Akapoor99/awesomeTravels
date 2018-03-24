@@ -69,7 +69,7 @@ $fRegS = file_get_contents('flightRegistryStore');
 $flightRegistry = unserialize('$fRegS');
 $searchResults = $flightRegistry->searchFlights($dateStart, $pointA, $pointB);
   $airportD =" Lon";
-for($i=0;$i<=3;$i++)$searchResults as $flight) {
+for($searchResults as $flight) {
   $flight->getAirportDeparture();
   $airportA = $flight->getAirportArrival();
   $airline = $flight->getAirline();
