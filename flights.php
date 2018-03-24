@@ -79,8 +79,8 @@ for($i=0;$i<=3;$i++)$searchResults as $flight) {
   $arrTime = $flight->getArrivalTime();
   ?>-->
 <div class ="row">
-<div class = "col-8 flightcontainer" id ="fcont".$i.">
-      <div class = "flight row"  id ="fsimple'.$i.'"">
+<div class = "col-8 flightcontainer" id ="fcont'.$i.'">
+      <div class = "flight row"  id ="fsimple'.$i.'">
         <div class = "simpinfo col-10">
           <img src="icons/plane.png" alt="plane icn"/>
           <div class = "flighttextcontainer">

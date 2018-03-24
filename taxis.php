@@ -63,9 +63,33 @@
       <div id="smalltitle">
         <span>From home</span>
       </div>
+
+  <?php
+      //require 'src/php/Hotel.php';
+      //require 'src/php/HotelRegistry.php';
+      $taxiFrom = $_POST["taxiFrom"];
+      $taxiTo = $_POST["taxiTo"];
+      $pickupDate = $_POST["pickupDate"];
+      $dropoffDate = $_POST["dropoffDate"];
+      $pickupTime = $_POST["pickupTime"];
+      $dropoffTime = $_POST["dropoffTime"];
+      $fRegS = file_get_contents('flightRegistryStore');
+      $flightRegistry = unserialize('$fRegS');
+      $searchResults = $flightRegistry->searchFlights($dateStart, $pointA, $pointB);
+        $airportD =" Lon";
+      for($i=0;$i<=3;$i++){
+        //$searchResults as $flight) {
+        /*$flight->getAirportDeparture();
+        $airportA = $flight->getAirportArrival();
+        $airline = $flight->getAirline();
+        $price = $flight->getPrice();
+        $date = $flight->getDate();
+        $depTime = $flight->getDepartureTime();
+        $arrTime = $flight->getArrivalTime();*/
+    echo'
         <div class ="row">
-          <div class = "col-9 flightcontainer" id ="fcont1">
-            <div class = "flight row"  id ="fsimple1">
+          <div class = "col-9 flightcontainer" id ="fcont'.$i.'">
+            <div class = "flight row"  id ="fsimple'.$i.'">
               <div class = "simpinfo col-10">
                 <img src="icons/taxi.png" alt="taxi icn"/>
                 <div class = "flighttextcontainer">
@@ -75,11 +99,11 @@
                   <span id="airportcode">E11</span><span id="timestyle">20:00</span>
                 </div>
               </div>
-              <button class = "col-2"  onclick="toggleinfo('minfo1', 'fsimple1','fcont1','rotatearr1')">
-                <img src="icons/down-arrow.png" alt="down icn" id="rotatearr1" max-width: "80%"/>
+              <button class = "col-2"  onclick="toggleinfo(\'minfo'.$i.'\', \'fsimple'.$i.'\',\'fcont'.$i.'\',\'rotatearr'.$i.'\')">
+                <img src="icons/down-arrow.png" alt="down icn" id="rotatearr'.$i.'" max-width: "80%"/>
               </button>
             </div>
-            <div class = "moreinfo col" id="minfo1" style = "visibility: collapse;">
+            <div class = "moreinfo col" id="minfo'.$i.'" style = "visibility: collapse;">
               <div class = "row minforow">
                 <div class ="col-3">
                   <span id="airportcode">Tue 13 Mar</span>
@@ -124,6 +148,10 @@
 
           </div>
         </div>
+        ';
+    }
+  ?>
+        <!--
         <div class ="row">
           <div class = "col-9 flightcontainer" id ="fcont2">
             <div class = "flight row"  id ="fsimple2">
@@ -244,7 +272,7 @@
             </div>
           </div>
         </div>
-        </div>
+      </div>-->
 
       </div>
     </div>
@@ -267,9 +295,23 @@
   <div id="smalltitle">
     <span>From airport</span>
   </div>
+
+
+
+  <?php
+  for($i=0;$i<=3;$i++){
+    //$searchResults as $flight) {
+    /*$flight->getAirportDeparture();
+    $airportA = $flight->getAirportArrival();
+    $airline = $flight->getAirline();
+    $price = $flight->getPrice();
+    $date = $flight->getDate();
+    $depTime = $flight->getDepartureTime();
+    $arrTime = $flight->getArrivalTime();*/
+  echo'
   <div class ="row">
-    <div class = "col-9 flightcontainer" id ="fcont4">
-      <div class = "flight row"  id ="fsimple4">
+    <div class = "col-9 flightcontainer" id ="fcont'.$i.'">
+      <div class = "flight row"  id ="fsimple'.$i.'">
         <div class = "simpinfo col-10">
           <img src="icons/taxi.png" alt="taxi icn"/>
           <div class = "flighttextcontainer">
@@ -279,11 +321,11 @@
             <span id="airportcode">LAX</span><span id="timestyle">20:00</span>
           </div>
         </div>
-        <button class = "col-2"  onclick="toggleinfo('minfo4', 'fsimple4','fcont4','rotatearr4')">
-          <img src="icons/down-arrow.png" alt="down icn" id="rotatearr4"/>
+        <button class = "col-2"  onclick="toggleinfo(\'minfo'.$i.'\', \'fsimple'.$i.'\',\'fcont'.$i.'\',\'rotatearr'.$i.'\')">
+          <img src="icons/down-arrow.png" alt="down icn" id="rotatearr'.$i.'"/>
         </button>
       </div>
-      <div class = "moreinfo col" id="minfo4" style = "visibility: collapse;">
+      <div class = "moreinfo col" id="minfo'.$i.'" style = "visibility: collapse;">
         <div class = "row minforow">
           <div class ="col-3">
             <span id="airportcode">Tue 13 Mar</span>
@@ -328,6 +370,11 @@
 
     </div>
   </div>
+  ';
+}
+?>
+
+<!--
   <div class ="row">
     <div class = "col-9 flightcontainer" id ="fcont5">
       <div class = "flight row"  id ="fsimple5">
@@ -449,6 +496,7 @@
     </div>
   </div>
   </div>
+-->
 
 </div>
 </div>

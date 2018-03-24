@@ -137,19 +137,18 @@
               </div>
 
             </div>
-            <a href="flights.html">
-            <div class="footer-book" >
-              <button type="submit">
+
+              <button class="footer-book" type="submit">
               <i class="fa fa-search"> Go </i>
             </button>
-            </div>
-          </a>
 
           </div>
         </div>
       </form>
+      <!-- End of Form Flight-->
 
           <!-- Hotels Booking Tab-->
+          <form action="hotels.php" >
           <div class="bookingBox" id="Hotels">
             <div class="box-container">
 
@@ -180,29 +179,30 @@
                 </div>
 
                   <div class="body-bar">
-                    <input type="text" id="departureDpicker" placeholder="Departure">
+                    <input type="text" name="checkIn" id="departureDpicker" placeholder="Check In">
                   <i class="fa fa-calendar icon" ></i>
-                    <input type="text" id="returnDpicker" placeholder="Return">
+                    <input type="text" name="checkOut" id="returnDpicker" placeholder="Check Out">
                   </div>
 
                     <div class="body-bar">
-                      <input type="number" id="numOfPass" placeholder="Adults">
+                      <input type="number" name="numOfAdults" id="numOfPass" placeholder="Adults">
                     <i class="fa fa-building icon" ></i>
-                      <input type="number" id="numOfPass" placeholder="Childer 0-5">
+                      <input type="number" name="numOfChildren" id="numOfPass" placeholder="Children 0-8 yrs">
                     </div>
 
             </div>
 
-            <a href="hotels.html">
-            <div class="footer-book">
+              <button class="footer-book" type="submit">
               <i class="fa fa-search"> Book Now </i>
-            </div>
-          </a>
+            </button>
           </div>
 
           </div>
+        </form>
+        <!-- End of Form Hotel-->
 
                 <!-- Taxi Booking Tab-->
+                <form action="taxis.php">
                 <div class="bookingBox" id="Taxis">
                   <div class="box-container">
 
@@ -226,11 +226,6 @@
                   </div>
                   </div>
 
-                    <div class="body-bar">
-                      <div class="body-item">
-                        <input type="text" name="location" placeholder="City / Hotel">
-                      </div>
-                    </div>
 
 
                   <div class="body-bar">
@@ -240,19 +235,19 @@
                   </div>
 
                       <div class="body-bar">
-                        <input type="text" id="startDate" placeholder="Pick-up date">
+                        <input type="text" id="pickupDate" placeholder="Pick-up date">
                       <i class="fa fa-calendar icon" ></i>
-                        <input type="text" id="endDate" placeholder="Drop-off date">
+                        <input type="text" id="dropoffDate" placeholder="Drop-off date">
                       </div>
 
                         <div class="body-bar">
-                          <select id="class">
+                          <select name="pickupTime" id="class">
                             <option>5:15</object>
                             <option>4:30</option>
                             <option>6:45</option>
                           </select>
                         <i class="fa fa-clock-o" ></i>
-                          <select id="class">
+                          <select name="dropoffTime" id="class">
                             <option>5:15</object>
                             <option>4:30</option>
                             <option>6:45</option>
@@ -261,14 +256,14 @@
 
                   </div>
 
-                  <a href="taxis.html">
-                  <div class="footer-book">
+                    <button class="footer-book" type="submit">
                     <i class="fa fa-search"> Vroom! </i>
-                  </div>
-                </a>
+                    </button>
 
                 </div>
                 </div>
+              </form>
+              <!-- End of Form Taxi-->
 
                 <div class="headeing-content">
                   <h1 id="content1" class="heading">Travel Made Simpler</h1>
