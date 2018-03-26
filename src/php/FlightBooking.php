@@ -1,5 +1,5 @@
 <?php
-require 'Flight.php';
+require_once 'Flight.php';
 
 class FlightBooking
 {
