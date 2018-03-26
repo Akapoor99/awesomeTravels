@@ -1,6 +1,7 @@
-<!doctype html>
-<!--Hello earthlings-->
-<html lang="en">
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns = "http://www.w3.org/1999/xhtml">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -18,12 +19,14 @@
     <link href="css/homepage/booking.css" rel="stylesheet">
     <link href="css/homepage/topBar.css" rel="stylesheet">
     <link href="css/homepage/bookingBox.css" rel="stylesheet">
-    <link href="css/homepage/login.css" rel="stylesheet">
+    <link href="css/homepage/logIn.css" rel="stylesheet">
+    <link href="css/homepage/whyUs.css" rel="stylesheet">
+    <link href="css/homepage/contactUS.css" rel="stylesheet">
+    <link href="css/homepage/footer.css" rel="stylesheet">
 
     <title>Awesome Travels- nobody does it better !</title>
   </head>
   <body  onload="startTime()">
-    <div class="main_container">
 
       <!-- TOP BAR Panel -->
     <nav id="topBar">
@@ -48,37 +51,42 @@
           </div>
     </nav>
 
-    <!--Header-->
-
-
-    <header id="top" class="masthead">
-
     <!-- Navigation -->
     <nav class="navbar navbar-light" id="mainNav">
 
-      <div class="nav-container">
-
         <div class="nav-head">
-          <a href="#top" class="navbar-brand" onclick="closeBookingType()">Awesome Travels</a>
+          <img src="icons/yUS/ATLOGO.png" id="logo"/>
+          <a href="#topBar" class="navbar-brand" onclick="closeBookingType()">Awesome Travels</a>
         </div>
 
         <div class="nav-body">
           <div class="nav-body-container">
-          <a class="nav-item js-scroll-trigger" onclick="openBookingType(event, 'Flights')">Fights | </a>
-          <a class="nav-item" onclick="openBookingType(event, 'Hotels')">Hotels | </a>
-          <a class="nav-item" onclick="openBookingType(event, 'Taxis')">Taxi | </a>
-          <a class="nav-item" href="#">Group Travel |</a>
-          <a class="nav-item" href="#">Contact</a>
+            <a class="nav-item js-scroll-trigger" href="#" id="flight" onclick="openBookingType(event, 'Flights')">Fights </a> |
+            <a class="nav-item js-scroll-trigger" href="#" id="hotel" onclick="openBookingType(event, 'Hotels')">Hotels </a> |
+            <a class="nav-item js-scroll-trigger" href="#" id="taxi" onclick="openBookingType(event, 'Taxis')">Taxi </a> |
+            <a class="nav-item js-scroll-trigger" href="#" id="mmi" onclick="">MMI </a> |
+            <a class="nav-item js-scroll-trigger" href="#" id="p2p" onclick="">P2P </a> |
+            <a class="nav-item js-scroll-trigger" href="#" id="ps" onclick="">PS </a> |
+            <a class="nav-item js-scroll-trigger" href="#bottomSign" id="contact" onclick="">Contact</a>
         </div>
       </div>
 
-      </div>
     </nav>
+
+    <!--Header-->
+    <header id="top" class="masthead">
+
+      <div id="content1">
+        <h1 class="heading">Travel Made Simpler</h1>
+        <a id="content2" href="#whyUs" class="btn btn-circle js-scroll-trigger">
+          <i class="fa fa-angle-double-down animated"></i>
+        </a>
+    </div>
 
 
     <!-- Flight Booking Tab-->
-    <form action="flights.php" method = "post">
-      <div class="bookingBox" id="Flights">
+    <form action="flights.php" method="post">
+    <div class="bookingBox" id="Flights">
 
         <div class="box-container">
 
@@ -103,14 +111,23 @@
         </div>
 
           <div class="body-bar journey">
-            <div class="body-item journey-opt">
-              One-way
+            <div class="body-item journey-body-opt">
+              <label class="journey-opt">
+                <input type="radio" name="journey-type" value="one_way" checked="checked"/>
+                <div>One-way</div>
+              </label>
             </div>
-              <div class="body-item journey-opt">
-                Return
+              <div class="body-item journey-body-opt">
+                <label class="journey-opt">
+                <input type="radio" name="journey-type" value="return"/>
+                <div>Return</div>
+              </label>
               </div>
-                <div class="body-item journey-opt">
-                  Multi-city
+                <div class="body-item journey-body-opt">
+                  <label class="journey-opt">
+                  <input type="radio" name="journey-type" value="multi-city"/>
+                  <div>Multi-city</div>
+                </label>
                 </div>
             </div>
 
@@ -137,29 +154,32 @@
               </div>
 
             </div>
-            <a href="flights.html">
-            <div class="footer-book" >
-              <button type="submit">
+
+              <button class="footer-book" type="submit">
               <i class="fa fa-search"> Go </i>
             </button>
-            </div>
-          </a>
 
           </div>
         </div>
       </form>
+      <!-- End of Form Flight-->
 
-          <!-- Hotels Booking Tab-->
-          <div class="bookingBox" id="Hotels">
-            <div class="box-container">
+
+      <!-- Hotels Booking Tab-->
+      <form action="hotels.php" >
+        <div class="bookingBox" id="Hotels">
+          <div class="box-container">
 
             <div class="header-bBox" id="flight-booking">
+
               <div class="header-item" id="logo flight-booking" onclick="openBookingType(event, 'Flights')">
                   <i class="fa fa-plane"></i>
               </div>
+
               <div class="header-item-selected" id="logo hotel-booking" onclick="openBookingType(event, 'Hotels')">
                   <i class="fa fa-building"></i>
               </div>
+
               <div class="header-item" id="logo taxi-booking" onclick="openBookingType(event, 'Taxis')">
                   <i class="fa fa-car"></i>
               </div>
@@ -180,29 +200,30 @@
                 </div>
 
                   <div class="body-bar">
-                    <input type="text" id="departureDpicker" placeholder="Departure">
+                    <input type="text" name="checkIn" id="checkInDpicker" placeholder="Check In">
                   <i class="fa fa-calendar icon" ></i>
-                    <input type="text" id="returnDpicker" placeholder="Return">
+                    <input type="text" name="checkOut" id="checkOutDpicker" placeholder="Check Out">
                   </div>
 
                     <div class="body-bar">
-                      <input type="number" id="numOfPass" placeholder="Adults">
+                      <input type="number" name="numOfAdults" id="numOfAdults" placeholder="Adults">
                     <i class="fa fa-building icon" ></i>
-                      <input type="number" id="numOfPass" placeholder="Childer 0-5">
+                      <input type="number" name="numOfChildren" id="numOfChilds" placeholder="Children 0-8 yrs">
                     </div>
 
             </div>
 
-            <a href="hotels.html">
-            <div class="footer-book">
+              <button class="footer-book" type="submit">
               <i class="fa fa-search"> Book Now </i>
-            </div>
-          </a>
+            </button>
           </div>
 
           </div>
+        </form>
+        <!-- End of Form Hotel-->
 
                 <!-- Taxi Booking Tab-->
+                <form action="taxis.php">
                 <div class="bookingBox" id="Taxis">
                   <div class="box-container">
 
@@ -226,11 +247,6 @@
                   </div>
                   </div>
 
-                    <div class="body-bar">
-                      <div class="body-item">
-                        <input type="text" name="location" placeholder="City / Hotel">
-                      </div>
-                    </div>
 
 
                   <div class="body-bar">
@@ -240,19 +256,19 @@
                   </div>
 
                       <div class="body-bar">
-                        <input type="text" id="startDate" placeholder="Pick-up date">
+                        <input type="text" id="pickupDate" placeholder="Pick-up date">
                       <i class="fa fa-calendar icon" ></i>
-                        <input type="text" id="endDate" placeholder="Drop-off date">
+                        <input type="text" id="dropoffDate" placeholder="Drop-off date">
                       </div>
 
                         <div class="body-bar">
-                          <select id="class">
+                          <select name="pickupTime" id="class">
                             <option>5:15</object>
                             <option>4:30</option>
                             <option>6:45</option>
                           </select>
                         <i class="fa fa-clock-o" ></i>
-                          <select id="class">
+                          <select name="dropoffTime" id="class">
                             <option>5:15</object>
                             <option>4:30</option>
                             <option>6:45</option>
@@ -261,21 +277,14 @@
 
                   </div>
 
-                  <a href="taxis.html">
-                  <div class="footer-book">
+                    <button class="footer-book" type="submit">
                     <i class="fa fa-search"> Vroom! </i>
-                  </div>
-                </a>
+                    </button>
 
                 </div>
                 </div>
-
-                <div class="headeing-content">
-                  <h1 id="content1" class="heading">Travel Made Simpler</h1>
-                  </div>
-                    <a id="content2" href="#booking" class="btn btn-circle js-scroll-trigger">
-                      <i class="fa fa-angle-double-down animated"></i>
-                    </a>
+              </form>
+              <!-- End of Form Taxi-->
     </header>
 
     <section class="login" id="logIn">
@@ -299,7 +308,76 @@
       </div>
     </section>
 
-  </div>
+    <section id="whyUs">
+      <h2 class="heading">Why Only Us ?</h2>
+      <div class="whyUs-container">
+        <div class="container-context">
+          <div class="content-item">
+            <img src="icons/yUS/mmi.png"/>
+            <h4>Make My Itinerary</h4>
+            <p> After an individual books a ticket an itinerary of their entire journey is automatically generated and sent to them via email.</p>
+          </div>
+            <div class="content-item">
+              <img src="icons/yUS/p2p.png"/>
+              <h4>Point 2 Point</h4>
+              <p>Detect location and provide a detailed outlook from the starting point to the end of the journey with transport map , time taken to reach there etc.</p>
+            </div>
+              <div class="content-item">
+                <img src="icons/yUS/pp.png"/>
+                <h4>Porter Service</h4>
+                <p>Just like you would expect the porter service will provide an airport porter to make things easier for your journey from taking care of your luggage to checking it in for you , the airport porter service does it all.</p>
+              </div>
+        </div>
+          <div class="container-context">
+          </div>
+      </div>
+    </section>
+
+    <section id="contactUs">
+      <div class="contactUs-container">
+        <div class="container-context">
+          <div class="content-item">
+            <h4>Contact</h4>
+            <p> After an individual books a ticket an .</p>
+            <a class="contact-info"><i class="fa fa-map-marker">&nbsp&nbsp address</i></a>
+            <a class="contact-info"><i class="fa fa-phone">&nbsp&nbsp phone Number</i></a>
+            <a class="contact-info"><i class="fa fa-envelope">&nbsp&nbsp emial_id</i></a>
+          </div>
+            <div class="content-item">
+              <h4>Information</h4>
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+              <div class="content-item">
+                <h4>Our Menu</h4>
+                <ul>
+                  <li>About Us</li>
+                  <li>Career</li>
+                  <li>Terms</li>
+                  <li>Privacy Policy</li>
+                  <li>Contact</li>
+                </ul>
+              </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="bottomSign">
+      <div class="lp">
+        Copyright @ 2018 AwesomeTravels. All Rights Reserved.
+      </div>
+      <div class="rp">
+        <a>Terms of Use </a> |
+        <a>Privacy Policy </a> |
+        <i class="fa fa-twitter"></i> <i class="fa fa-facebook"></i> <i class="fa fa-instagram"></i>
+      </div>
+    </footer>
+
 
 
     <!-- Optional JavaScript -->
@@ -311,7 +389,7 @@
    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
    <script src="js/datePicker.js"></script>
     <script src="js/navBarScroll.js"></script>
-    <script src="js/searchBarScroll.js"></script>
+    <!--<script src="js/searchBarScroll.js"></script>-->
     <script src="js/smoothScroll.js"></script>
     <script src="js/index.js"></script>
   </body>
