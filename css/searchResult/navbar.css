@@ -1,34 +1,55 @@
 #mainNav {
   font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  margin-bottom: 0;
-  text-transform: uppercase;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  margin: 0px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
   background-color: black;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    font-weight: bold;
 }
   #mainNav .navbar-brand {
-    font-weight: 700; }
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: 2.5px 1px 2px rgba(255,50,50,1);
+  }
   #mainNav a {
     color: white;
   }
+  #mainNav .nav-head{
+    display: flex;
+    padding: 2px;
+    margin: 5px;
+    margin-left: 50px;
+    padding-left: 25px;
+  }
   #mainNav .nav-body{
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-content: center;
+    padding: 2px;
+    margin: 5px;
   }
-  #mainNav .nav-container{
-    font-weight: bold;
-    align-items: center;
-    align-content: center;
+  #mainNav .nav-body-container{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
   }
   #mainNav .nav-item{
     color: rgba(255,255,255,1);
-    outline: none;
+    font-weight: 300;
+    font-size: 18px;
+    padding: 5px;
+    justify-content: center;
   }
   #mainNav .nav-item:hover {
     color: rgba(210,210,210,1);
     text-decoration: none;
     }
+    #mainNav .nav-item:active {
+      color: rgba(210,210,210,1);
+      text-decoration: none;
+      }
   @media (min-width: 992px) {
     #mainNav {
       padding-top: 20px;
@@ -38,7 +59,15 @@
       transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
       letter-spacing: 1px;
       border-bottom: none;
-      background: transparent;}
+      background: transparent;
+    }
+      #mainNav.navbar-change {
+        width: 100%;
+        margin: 0px;
+        padding-top: 22px;
+        padding-bottom: 22px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        background: black; }
     }
 
 #mainNav .btn-login{

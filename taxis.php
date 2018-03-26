@@ -31,9 +31,9 @@
         </div>
         <div class="nav-body">
           <div class="nav-container">
-          <a class="nav-item" href="flights.html">Fights</a> |
-          <a class="nav-item" href="hotels.html">Hotels</a> |
-          <a class="nav-item" href="taxis.html">Taxi</a> |
+          <a class="nav-item" href="flights.php">Fights</a> |
+          <a class="nav-item" href="hotels.php">Hotels</a> |
+          <a class="nav-item" href="taxis.php">Taxi</a> |
           <a class="nav-item" href="complete.html">complete</a>
         </div>
         <div class="nav-footer">
@@ -65,18 +65,17 @@
       </div>
 
   <?php
-      //require 'src/php/Hotel.php';
-      //require 'src/php/HotelRegistry.php';
+      /*require 'src/php/Hotel.php';
+      require 'src/php/HotelRegistry.php';*/
       $taxiFrom = $_POST["taxiFrom"];
       $taxiTo = $_POST["taxiTo"];
       $pickupDate = $_POST["pickupDate"];
       $dropoffDate = $_POST["dropoffDate"];
       $pickupTime = $_POST["pickupTime"];
       $dropoffTime = $_POST["dropoffTime"];
-      $fRegS = file_get_contents('flightRegistryStore');
+      /*$fRegS = file_get_contents('flightRegistryStore');
       $flightRegistry = unserialize('$fRegS');
-      $searchResults = $flightRegistry->searchFlights($dateStart, $pointA, $pointB);
-        $airportD =" Lon";
+      $searchResults = $flightRegistry->searchFlights($dateStart, $pointA, $pointB);*/
       for($i=0;$i<=3;$i++){
         //$searchResults as $flight) {
         /*$flight->getAirportDeparture();
@@ -91,7 +90,7 @@
           <div class = "col-9 flightcontainer" id ="fcont'.$i.'">
             <div class = "flight row"  id ="fsimple'.$i.'">
               <div class = "simpinfo col-10">
-                <img src="icons/taxi.png" alt="taxi icn"/>
+                <img src="src/taxi.png" alt="taxi icn"/>
                 <div class = "flighttextcontainer">
                     <span id="airportcode">IG3</span><span id="timestyle">16:00</span>
                   <div class = "dividerline">
@@ -100,7 +99,7 @@
                 </div>
               </div>
               <button class = "col-2"  onclick="toggleinfo(\'minfo'.$i.'\', \'fsimple'.$i.'\',\'fcont'.$i.'\',\'rotatearr'.$i.'\')">
-                <img src="icons/down-arrow.png" alt="down icn" id="rotatearr'.$i.'" max-width: "80%"/>
+                <img src="src/down-arrow.png" alt="down icn" id="rotatearr'.$i.'" max-width: "80%"/>
               </button>
             </div>
             <div class = "moreinfo col" id="minfo'.$i.'" style = "visibility: collapse;">
@@ -130,7 +129,7 @@
               </div>
               <div class = "row minforow">
                 <div class ="col-3">
-                  <img src = "icons/BAlogo.png" />
+                  <img src = "src/BAlogo.png" />
                 </div>
                 <div class ="col-6">
                   <span id="timestyle">British Airways 824</span> </br>
@@ -313,7 +312,7 @@
     <div class = "col-9 flightcontainer" id ="fcont'.$i.'">
       <div class = "flight row"  id ="fsimple'.$i.'">
         <div class = "simpinfo col-10">
-          <img src="icons/taxi.png" alt="taxi icn"/>
+          <img src="src/taxi.png" alt="taxi icn"/>
           <div class = "flighttextcontainer">
             <span id="airportcode">LHR</span><span id="timestyle">16:00</span>
             <div class = "dividerline">
@@ -322,7 +321,7 @@
           </div>
         </div>
         <button class = "col-2"  onclick="toggleinfo(\'minfo'.$i.'\', \'fsimple'.$i.'\',\'fcont'.$i.'\',\'rotatearr'.$i.'\')">
-          <img src="icons/down-arrow.png" alt="down icn" id="rotatearr'.$i.'"/>
+          <img src="src/down-arrow.png" alt="down icn" id="rotatearr'.$i.'"/>
         </button>
       </div>
       <div class = "moreinfo col" id="minfo'.$i.'" style = "visibility: collapse;">
@@ -352,7 +351,7 @@
         </div>
         <div class = "row minforow">
           <div class ="col-3">
-            <img src = "icons/BAlogo.png" />
+            <img src = "src/BAlogo.png" />
           </div>
           <div class ="col-6">
             <span id="timestyle">British Airways 824</span> </br>

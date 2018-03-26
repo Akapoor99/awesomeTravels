@@ -1,14 +1,14 @@
 function startTime() {
-  var weeks=[,"Mon","Tue","Web","Thur","Fri","Sat","Sun"];
+    var weeks=["Sun","Mon","Tue","Wed","Thur","Fri","Sat"];
     var today = new Date();
-    var d=today.getDay();
+    var d = today.getDay();
     var h = today.getHours();
     var m = today.getMinutes();
     var s = today.getSeconds();
     m = checkTime(m);
     s = checkTime(s);
     document.getElementById('date').innerHTML =
-    "&nbsp" +weeks[d] + "&nbsp";
+    "&nbsp" + weeks[d] + "&nbsp";
     document.getElementById('time').innerHTML =
     h + ":" + m ;
     var t = setTimeout(startTime, 500);

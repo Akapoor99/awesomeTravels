@@ -32,9 +32,9 @@
         </div>
         <div class="nav-body">
           <div class="nav-container">
-          <a class="nav-item" href="flights.html">Fights</a> |
-          <a class="nav-item" href="hotels.html">Hotels</a> |
-          <a class="nav-item" href="taxis.html">Taxi</a> |
+          <a class="nav-item" href="flights.php">Fights</a> |
+          <a class="nav-item" href="hotels.php">Hotels</a> |
+          <a class="nav-item" href="taxis.php">Taxi</a> |
           <a class="nav-item" href="complete.html">complete</a>
         </div>
         <div class="nav-footer">
@@ -62,17 +62,16 @@
 
 
 <?php
-  require 'src/php/Hotel.php';
-  require 'src/php/HotelRegistry.php';
+  /*require 'src/php/Hotel.php';
+  require 'src/php/HotelRegistry.php';*/
   $location = $_POST["location"];
   $checkIn = $_POST["checkIn"];
   $checkOut = $_POST["checkOut"];
   $numOfA = $_POST["numOfAdults"];
   $numOfC = $_POST["numOfChildren"];
-  $fRegS = file_get_contents('flightRegistryStore');
+  /*$fRegS = file_get_contents('flightRegistryStore');
   $flightRegistry = unserialize('$fRegS');
-  $searchResults = $flightRegistry->searchFlights($dateStart, $pointA, $pointB);
-    $airportD =" Lon";
+  $searchResults = $flightRegistry->searchFlights($dateStart, $pointA, $pointB);*/
   for($i=0;$i<=3;$i++){
     //$searchResults as $flight) {
     /*$flight->getAirportDeparture();
@@ -89,7 +88,7 @@ echo'
               <div class = "simpinfo col-10">
                 <div class = "row" style="margin:0; padding: 0;">
                   <div class = "col-2">
-                    <img src="icons/hotel.png"class="img-fluid mx-auto d-block" alt="hotel icn"/>
+                    <img src="src/hotel.png"class="img-fluid mx-auto d-block" alt="hotel icn"/>
                   </div>
                   <div class = "hoteltextcontainer col-4">
                       <div class="text-center" style="margin-top:15px;">
@@ -112,7 +111,7 @@ echo'
                 </div>
               </div>
               <button class = "col-2"  onclick="toggleinfo(\'minfo'.$i.'\', \'fsimple'.$i.'\',\'fcont'.$i.'\',\'rotatearr'.$i.'\')">
-                <img src="icons/down-arrow.png" alt="down icn" id="rotatearr'.$i.'"/>
+                <img src="src/down-arrow.png" alt="down icn" id="rotatearr'.$i.'"/>
               </button>
             </div>
             <div class = "moreinfo col" id="minfo'.$i.'" style = "visibility: collapse;">
@@ -142,7 +141,7 @@ echo'
               </div>
               <div class = "row minforow">
                 <div class ="col-3">
-                  <img src = "icons/BAlogo.png" />
+                  <img src = "src/BAlogo.png" />
                 </div>
                 <div class ="col-6">
                   <span id="timestyle">British Airways 824</span> </br>

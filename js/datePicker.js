@@ -4,4 +4,10 @@
     $( "#departureDpicker" ).datepicker();
     $( "#returnDpicker" ).datepicker();
 
+    $( "#checkInDpicker" ).datepicker();
+    $( "#checkOutDpicker" ).datepicker();
+
+    $( "#pickupDate" ).datepicker();
+    $( "#dropoffDate" ).datepicker();
+
 })(jQuery);
