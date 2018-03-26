@@ -3,7 +3,9 @@
 
     require_once dirname(dirname(__FILE__)).'/awesomeTravels-php-backend/awesomeTravels/php/Member.php';
     $user = new Customer();
-    $_SESSION["user"] = $user;
+    if(!$_SESSION["user"] instanceof Member){
+      $_SESSION["user"] = $user;
+    }
 ?>
 
 <?xml version = "1.0" encoding = "utf-8"?>
@@ -294,7 +296,7 @@
               </form>
               <!-- End of Form Taxi-->
     </header>
-
+<?php if(!$_SESSION["user"] instanceof Member) : ?>
     <section class="login" id="logIn">
       <div class="loginBox">
         <div class="logIn_header">
@@ -318,7 +320,7 @@
         </div>
       </div>
     </section>
-
+<?php endif; ?>
     <section id="whyUs">
       <h2 class="heading">Why Only Us ?</h2>
       <div class="whyUs-container">
