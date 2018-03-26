@@ -1,5 +1,12 @@
+<?php
+session_start();
+$flightObjS = $_POST["flightObjS"];
+$_SESSION["flightbooking"] = unserialize($flightObjS);
+?>
+
+<!doctype html>
 <!--Hello earthlings-->
-<html xmlns ="http://www.w3.org/1999/xhtml">
+<html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -14,8 +21,9 @@
     <link href="css/searchResult/style.css" rel="stylesheet">
     <link href="css/searchResult/navbar.css" rel="stylesheet">
     <link href="css/searchResult/header.css" rel="stylesheet">
-    <link href="css/searchResult/flightdivs.css" rel="stylesheet">
+    <link href="css/searchResult/hoteldivs.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--for stars-->
 
 
     <title>Awesome Travels- nobody does it !</title>
@@ -30,9 +38,9 @@
         </div>
         <div class="nav-body">
           <div class="nav-container">
-          <a class="nav-item" href="index.html">Flights</a> |
-          <a class="nav-item" href="hotels.html">Hotels</a> |
-          <a class="nav-item" href="taxis">Taxi</a> |
+          <a class="nav-item" href="flights.php">Fights</a> |
+          <a class="nav-item" href="hotels.php">Hotels</a> |
+          <a class="nav-item" href="taxis.html">Taxi</a> |
           <a class="nav-item" href="complete.html">complete</a>
         </div>
         <div class="nav-footer">
@@ -42,8 +50,8 @@
       </div>
     </nav>
 
-    <!-- This section contains the flight booking process uses infodivs css-->
-    <section id="booking">
+
+    <section id="booking" style = "background-color: rgba(219,80, 74, 1);">
       <div class="container">
         <div class="top-bar">
         </div>
@@ -52,102 +60,111 @@
       </div>
     </section>
 
-
-    <section id="flights">
+    <section id="hotels">
+      <div id="bigtitle" style = "margin-bottom: 30px;">
+        <span>Hotels</span>
+      </div>
       <div class = "container-fluid">
+
+
 <?php
-
-$path = dirname(dirname(__FILE__)).'/awesomeTravels-php-backend/awesomeTravels/php/FlightRegistry.php';
+$path = dirname(dirname(__FILE__)).'/awesomeTravelsbackend/php/HotelRegistry.php';
 require_once($path);
-$pointA = $_POST["flightFrom"];
-$pointB = $_POST["flightTo"];
-$dateStart = $_POST["departureDate"];
-$dateEnd = $_POST["returnDate"];
-$numOfP = $_POST["passengers"];
-$class = $_POST["classType"];
-echo $pointB;
-echo $dateStart;
-$fRegS = file_get_contents(dirname(dirname(__FILE__)).'/awesomeTravels-hp-backend/awesomeTravels/php/FlightRegistryStore');
-$flightRegistry = unserialize($fRegS);
-$searchResults = $flightRegistry->searchFlights($dateStart, $pointA, $pointB);
+  $location = $_POST["location"];
+  $checkIn = $_POST["checkIn"];
+  $checkOut = $_POST["checkOut"];
+  $numOfA = $_POST["numOfAdults"];
+  $numOfC = $_POST["numOfChildren"];
+  $hRegS = file_get_contents(dirname(dirname(__FILE__)).'//awesomeTravelsbackend/php/HotelRegistryStore');
+  $hotelRegistry = unserialize($hRegS);
+  $searchResults = $hotelRegistry->searchHotels("Paris");
 
-$i=0;
+    $i=0;
+  foreach($searchResults as $hotel) {
+    $hotelName = $hotel->getHotelName();
+    $hotelLocation = $hotel->getLocation();
+    $pricePerNight = $hotel->getPricePerNight();
+    $availableRooms = $hotel->getAvailableRooms();
+    $hotelAddress = $hotel->getAddress();
+    echo'
+        <div class ="row">
+          <div class = "col-8 hotelcontainer" id ="fcont'.$i.'">
+            <div class = "hotel row"  id ="fsimple'.$i.'">
+              <div class = "simpinfo col-10">
+                <div class = "row" style="margin:0; padding: 0;">
+                  <div class = "col-2">
+                    <img src="icons/hotel.png"class="img-fluid mx-auto d-block" alt="hotel icn"/>
+                  </div>
+                  <div class = "hoteltextcontainer col-4">
+                      <div class="text-center" style="margin-top:15px;">
+                        <span id="airportcode">'.$hotelName.'</span></br>
+                        <span id="timestyle">'.$hotelLocation.'</span>
+                      </div>
+                  </div>
+                  <div class = "starratings col-3">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                  <div class = "price col-3" >
+                    <span id="airportcode">'.$pricePerNight.'</span></br>
+                  </div>
 
-foreach($searchResults as $flight) {
-  //echo $flight->getAirportDeparture();
-  $airportD = $flight->getAirportDeparture();
-  $airportA = $flight->getAirportArrival();
-  $airline = $flight->getAirline();
-  $price = $flight->getPrice();
-  $date = $flight->getDate();
-  $depTime = $flight->getDepartureTime();
-  $arrTime = $flight->getArrivalTime();
-//for($i = 0; $i<3; $i++){
-echo'<div class ="row">
-<div class = "col-8 flightcontainer" id ="fcont'.$i.'">
-      <div class = "flight row"  id ="fsimple'.$i.'"">
-        <div class = "simpinfo col-10">
-          <img src="icons/plane.png" alt="plane icn"/>
-          <div class = "flighttextcontainer">
-            <span id="airportcode">'.$airportD.'</span>
-            <span id="timestyle">'.$depTime->format('H:i').'</span>
-            <div class = "dividerline">
+
+                </div>
+              </div>
+              <button class = "col-2"  onclick="toggleinfo(\'minfo'.$i.'\', \'fsimple'.$i.'\',\'fcont'.$i.'\',\'rotatearr'.$i.'\')">
+                <img src="icons/down-arrow.png" alt="down icn" id="rotatearr'.$i.'"/>
+              </button>
             </div>
-            <span id="airportcode">'.$airportA.'</span><span id="timestyle">'.$arrTime->format('H:i').'</span>
-          </div>
-        </div>
-        <button class = "col-2"  onclick="toggleinfo(\'minfo'.$i.'\''.',\'fsimple'.$i.'\''.',\'fcont'.$i.'\''.',\'rotatearr'.$i.'\''.')">
-          <img src="icons/down-arrow.png" alt="down icn" id="rotatearr'.$i.'"/>
-        </button>
-      </div>
-      <div class = "moreinfo col" id="minfo'.$i.'" style = "visibility: collapse;">
-        <div class = "row minforow">
-          <div class ="col-3">
-            <span id="airportcode">'.$date->format('d F Y').'</span>
-          </div>
-          <div class ="col-6">
-            <div class = "row">
-              <div class = "col-5">
-                <span id="airportcode">'.$airportD.'</span></br>
-                <span id="timestyle">'.$depTime->format('H:i').'</span>
+            <div class = "moreinfo col" id="minfo'.$i.'" style = "visibility: collapse;">
+              <div class = "row minforow">
+
+                <div class ="offset-2 col-8">
+                  <div class = "row">
+                    <div class = "col-5">
+                      <span id="airportcode">Check In</span></br>
+                      <span id="timestyle">'.$checkIn.'</span>
+                    </div>
+                    <div class = "col-2" style="padding-left:0; padding-right:0; padding-top: 22px;">
+                      <div class = "dividerline" id="divlinminfo"></div>
+                    </div>
+                    <div class = "col-5">
+                      <span id="airportcode">Check Out</span></br>
+                      <span id="timestyle">'.$checkOut.'</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class = "col-2" style="padding-left:0; padding-right:0; padding-top: 22px;">
-                <div class = "dividerline" id="divlinminfo"></div>
+              <div class = "row minforow">
+                <div class ="col-3">
+                  <img src="icons/hotel.png"class="img-fluid mx-auto d-block" alt="hotel icn"/>
+                </div>
+                <div class ="col-6">
+                  <span id="timestyle">Available Rooms: '.$availableRooms.'</span> </br>
+                  <span id="timestyle">Number of Adults: '.$numOfA.'</span> </br>
+                  <span id="timestyle">Number of Children: '.$numOfC.'</span> </br>
+                  <span id="timestyle">Address: '.$hotelAddress.'</span>
+                </div>
               </div>
-              <div class = "col-5">
-                <span id="airportcode">'.$airportA.'</span></br>
-                <span id="timestyle">'.$arrTime->format('H:i').'</span>
+              <div class = "row minforow">
+                <div class ="col text-center" style="margin-bottom: 20px">
+                  <form action = "taxis.html" method = "post">
+                    <input type="hidden" name="hotelObjS" value="'.serialize($hotel).'">
+                    <button type="submit" class="btn btn-danger">Add To Plan</button>
+                  </form>
+                </div>
+
               </div>
             </div>
-          </div>
-          <div class ="col-3">
-            <span id="airportcode">Economy</span></br>
-            <span id="timestyle">1hrs 00mins</span>
-          </div>
-        </div>
-        <div class = "row minforow">
-          <div class ="col-3">
-            <img src = "icons/BAlogo.png" />
-          </div>
-          <div class ="col-6">
-            <span id="timestyle">British Airways 824</span> </br>
-            <span id="timestyle">Narrow-body jet Airbus A320-100/200</span> </br>
-            <span id="timestyle">Operated by Aer Lingus</span>
-          </div>
-        </div>
-        <div class = "row minforow">
-          <div class ="col text-center" style="margin-bottom: 20px">
-            <button type="button" class="btn btn-danger">Add To Plan</button>
-          </div>
 
-        </div>
-      </div>
-
-    </div>
-  </div>';
-  $i++;
-  }
-  ?>
+          </div>
+        </div>';
+        $i++;
+      }
+      ?>
 
       </div>
     </section>
