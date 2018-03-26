@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+
+
 <!doctype html>
 <!--Hello earthlings-->
 <html lang="en">
