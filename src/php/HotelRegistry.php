@@ -1,5 +1,5 @@
 <?php
-require 'Hotel.php';
+require_once 'Hotel.php';
 
 class HotelRegistry
 {
