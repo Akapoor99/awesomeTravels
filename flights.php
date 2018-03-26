@@ -2,7 +2,6 @@
 session_start();
 ?>
 
-
 <!doctype html>
 <!--Hello earthlings-->
 <html lang="en">
@@ -61,9 +60,9 @@ session_start();
 
     <section id="flights">
       <div class = "container-fluid">
-
-<!--require 'src/php/Flight.php';
-require 'src/php/FlightRegistry.php';
+<?php
+require_once 'src/php/Flight.php';
+require_once 'src/php/FlightRegistry.php';
 $pointA = $_POST["flightFrom"];
 $pointB = $_POST["flightTo"];
 $dateStart = $_POST["departureDate"];
@@ -74,7 +73,7 @@ $fRegS = file_get_contents('flightRegistryStore');
 $flightRegistry = unserialize('$fRegS');
 $searchResults = $flightRegistry->searchFlights($dateStart, $pointA, $pointB);
   $airportD =" Lon";
-for($searchResults as $flight) {
+foreach($searchResults as $flight) {
   $flight->getAirportDeparture();
   $airportA = $flight->getAirportArrival();
   $airline = $flight->getAirline();
@@ -82,7 +81,7 @@ for($searchResults as $flight) {
   $date = $flight->getDate();
   $depTime = $flight->getDepartureTime();
   $arrTime = $flight->getArrivalTime();
-  ?>-->
+?>
 <div class ="row">
 <div class = "col-8 flightcontainer" id ="fcont'.$i.'">
       <div class = "flight row"  id ="fsimple'.$i.'">
