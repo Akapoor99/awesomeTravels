@@ -1,5 +1,5 @@
 <?php
-require("Booking.php");
+require_once 'Booking.php';
 
 class Customer
 {
