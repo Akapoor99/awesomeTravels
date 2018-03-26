@@ -1,5 +1,5 @@
 <?php
-require 'Member.php';
+require_once 'Member.php';
 
 class MemberRegistry
 {
