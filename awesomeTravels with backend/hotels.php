@@ -67,14 +67,14 @@ session_start();
 
 
 <?php
-$path = dirname(dirname(__FILE__)).'/awesomeTravels-patch-2/php/HotelRegistry.php';
+$path = dirname(dirname(__FILE__)).'/awesomeTravels-php-backend/awesomeTravels/php/HotelRegistry.php';
 require_once($path);
   $location = $_POST["location"];
   $checkIn = $_POST["checkIn"];
   $checkOut = $_POST["checkOut"];
   $numOfA = $_POST["numOfAdults"];
   $numOfC = $_POST["numOfChildren"];
-  $hRegS = file_get_contents(dirname(dirname(__FILE__)).'/awesomeTravels-patch-2/php/HotelRegistryStore');
+  $hRegS = file_get_contents(dirname(dirname(__FILE__)).'/awesomeTravels-php-backend/awesomeTravels/HotelRegistryStore');
   $hotelRegistry = unserialize($hRegS);
   $searchResults = $hotelRegistry->searchHotels("Paris");
 

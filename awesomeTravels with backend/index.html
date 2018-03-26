@@ -1,7 +1,7 @@
 <?php
     session_start();
-    
-    require_once 'php/Member.php';
+
+    require_once dirname(dirname(__FILE__)).'/awesomeTravels-php-backend/awesomeTravels/php/Member.php';
     $user = new Customer();
     $_SESSION["user"] = $user;
 ?>
@@ -306,14 +306,15 @@
           </div>
         </div>
         <div class="logIn_body">
-        <form action="logIn.php" method="post">
+          <form action="logIn.php" method="post">
           <input class="username" type="text" name="username" placeholder="Username">
           <input class="password" type="password" name="password" placeholder="Password">
-        </form>
-          <div clas="register">
+          <div class="register">
             <input class="submit-btn" type="submit" type="submit" value="Log in">
+
               <a class="signUp" href="signUp.html">Create a new account !</a>
-          </div>
+            </div>
+          </form>
         </div>
       </div>
     </section>

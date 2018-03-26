@@ -57,7 +57,7 @@
       <div class = "container-fluid">
 <?php
 
-$path = dirname(dirname(__FILE__)).'/awesomeTravels-patch-2/php/FlightRegistry.php';
+$path = dirname(dirname(__FILE__)).'/awesomeTravels-php-backend/awesomeTravels/php/FlightRegistry.php';
 require_once($path);
 $pointA = $_POST["flightFrom"];
 $pointB = $_POST["flightTo"];
@@ -67,7 +67,7 @@ $numOfP = $_POST["passengers"];
 $class = $_POST["classType"];
 echo $pointB;
 echo $dateStart;
-$fRegS = file_get_contents(dirname(dirname(__FILE__)).'/awesomeTravels-patch-2/php/FlightRegistryStore');
+$fRegS = file_get_contents(dirname(dirname(__FILE__)).'/awesomeTravels-hp-backend/awesomeTravels/php/FlightRegistryStore');
 $flightRegistry = unserialize($fRegS);
 $searchResults = $flightRegistry->searchFlights($dateStart, $pointA, $pointB);
 
