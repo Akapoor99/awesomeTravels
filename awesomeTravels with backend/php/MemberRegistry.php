@@ -29,7 +29,7 @@ class MemberRegistry
     }
 
     function loginMembers($username, $password){
-        $member = self::searchMembers($username);
+        $member = $this->searchMembers($username);
         if($member->checkUserName($username) && $member->checkPassword($password)){
             return true;
         }
